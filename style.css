@@ -51,11 +51,11 @@
 	display: inline-block;
 }
 
-.form_radio_btn input[type=radio] {
+.level-input {
 	display: none;
 }
 
-.form_radio_btn label {
+.level-label {
 	display: inline-block;
 	cursor: pointer;
   width: 98px;
@@ -75,19 +75,13 @@
 }
  
 /* Checked */
-.form_radio_btn input[type=radio]:checked + label {
+.level-input:checked + label {
 	background: #ffe0a6;
 }
  
 /* Hover */
-.form_radio_btn label:hover {
+.level-label:hover {
 	opacity: 0.7;
-}
- 
-/* Disabled */
-.form_radio_btn input[type=radio]:disabled + label {
-	background: #efefef;
-	color: #666;
 }
 
 .button-start {
