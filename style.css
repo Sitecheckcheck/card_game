@@ -44,14 +44,25 @@
 .levels {
   display: flex;
   gap: 24px;
+  margin-bottom: 16px;
 }
 
-.level {
+.form_radio_btn {
+	display: inline-block;
+}
+
+.form_radio_btn input[type=radio] {
+	display: none;
+}
+
+.form_radio_btn label {
+	display: inline-block;
+	cursor: pointer;
   width: 98px;
   height: 98px;
+  font-family: "StratosSkyeng";
   background: #ffffff;
   border-radius: 12px;
-  font-family: "StratosSkyeng";
   font-style: normal;
   font-weight: 400;
   font-size: 64px;
@@ -60,17 +71,24 @@
   align-items: center;
   justify-content: center;
   color: #0080c1;
-  text-decoration: none;
-  margin-bottom: 24px;
+  border: none;
 }
-
-.level:hover {
-    opacity: 0.7;
-  }
-
-  .level:active {
-    opacity: 1;
-  }
+ 
+/* Checked */
+.form_radio_btn input[type=radio]:checked + label {
+	background: #ffe0a6;
+}
+ 
+/* Hover */
+.form_radio_btn label:hover {
+	opacity: 0.7;
+}
+ 
+/* Disabled */
+.form_radio_btn input[type=radio]:disabled + label {
+	background: #efefef;
+	color: #666;
+}
 
 .button-start {
   width: 246px;
