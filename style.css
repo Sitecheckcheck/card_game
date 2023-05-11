@@ -44,14 +44,25 @@
 .levels {
   display: flex;
   gap: 24px;
+  margin-bottom: 16px;
 }
 
-.level {
+.form_radio_btn {
+	display: inline-block;
+}
+
+.level-input {
+	display: none;
+}
+
+.level-label {
+	display: inline-block;
+	cursor: pointer;
   width: 98px;
   height: 98px;
+  font-family: "StratosSkyeng";
   background: #ffffff;
   border-radius: 12px;
-  font-family: "StratosSkyeng";
   font-style: normal;
   font-weight: 400;
   font-size: 64px;
@@ -60,8 +71,17 @@
   align-items: center;
   justify-content: center;
   color: #0080c1;
-  text-decoration: none;
-  margin-bottom: 24px;
+  border: none;
+}
+ 
+/* Checked */
+.level-input:checked + label {
+	background: #ffe0a6;
+}
+ 
+/* Hover */
+.level-label:hover {
+	opacity: 0.7;
 }
 
 .button-start {
@@ -78,3 +98,11 @@
   color: #ffffff;
   border: none;
 }
+
+.button-start:hover {
+  opacity: 0.8;
+}
+
+.button-start:active {
+    opacity: 1;
+  }
