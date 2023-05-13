@@ -1,10 +1,13 @@
 const appEl = document.getElementById("app");
 
 renderApp();
+window.application = {
+    level: null
+};
 
 function renderApp() {
   const appHtml = `
-    <form class="body">
+    <div class="body">
         <div class="start">
             <h2 class="start__title">Выбери <br> сложность</h2>
             <div class="levels">
@@ -25,7 +28,7 @@ function renderApp() {
             </div>
             <button id="buttonStart" class="button-start">Старт</button>
         </div>
-    </form>
+    </div>
     `;
 
   appEl.innerHTML = appHtml;
@@ -35,16 +38,17 @@ function renderApp() {
 
     for (const levelElement of levelElements) {
       if (levelElement.checked) {
-        level = levelElement.value;
+        window.application.level = levelElement.value;
         break;
       }
     }
 
-    renderGeme(level);
+    !window.application.level ? alert('Выберете сложность') : renderGame(window.application.level)
+
   });
 }
 
-function renderGeme(level) {
+function renderGame(level) {
   const appHtml = `
     <h1>
         Уровень ${level}
