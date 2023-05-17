@@ -52,7 +52,7 @@ function renderApp(renderGame) {
             appEl.innerHTML = renderGame(window.application.level)
             setTimeout(() => {
                 appEl.innerHTML = renderGameClose(window.application.level)
-            }, 1000)
+            }, 8000)
         }
     })
 }
