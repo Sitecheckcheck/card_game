@@ -1,5 +1,5 @@
 @font-face {
-    font-family: "StratosSkyeng";
+    font-family: StratosSkyeng;
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -30,8 +30,8 @@
     align-items: center;
 }
 
-.start__title {
-    font-family: "StratosSkyeng";
+.start-title {
+    font-family: StratosSkyeng, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 40px;
@@ -47,7 +47,7 @@
     margin-bottom: 16px;
 }
 
-.form_radio_btn {
+.form-radio-btn {
     display: inline-block;
 }
 
@@ -56,12 +56,11 @@
 }
 
 .level-label {
-    display: inline-block;
     cursor: pointer;
     width: 98px;
     height: 98px;
-    font-family: "StratosSkyeng";
-    background: #ffffff;
+    font-family: StratosSkyeng, sans-serif;
+    background: #fff;
     border-radius: 12px;
     font-style: normal;
     font-weight: 400;
@@ -74,12 +73,10 @@
     border: none;
 }
 
-/* Checked */
 .level-input:checked + label {
     background: #ffe0a6;
 }
 
-/* Hover */
 .level-label:hover {
     opacity: 0.7;
 }
@@ -89,13 +86,13 @@
     height: 50px;
     background: #7ac100;
     border-radius: 12px;
-    font-family: "StratosSkyeng";
+    font-family: StratosSkyeng, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
     line-height: 32px;
     font-feature-settings: "pnum" on, "lnum" on;
-    color: #ffffff;
+    color: #fff;
     border: none;
 }
 
@@ -112,7 +109,7 @@
     flex-direction: column;
 }
 
-.game__header {
+.game-header {
     width: 90vw;
     max-width: 979px;
     display: flex;
@@ -123,46 +120,40 @@
 }
 
 .time {
-    font-family: "StratosSkyeng";
+    font-family: StratosSkyeng, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 64px;
     line-height: 72px;
-    color: #ffffff;
+    color: #fff;
     display: flex;
 }
 
-.time__block {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-.time__name {
-    font-family: "StratosSkyeng";
+.time-name {
+    font-family: StratosSkyeng, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 32px;
     font-feature-settings: "pnum" on, "lnum" on;
-    color: #ffffff;
+    color: #fff;
 }
 
-.game__zone-1 {
+.game-zone-1 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 15px;
     list-style: none;
 }
 
-.game__zone-2 {
+.game-zone-2 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 15px;
     list-style: none;
 }
 
-.game__zone-3 {
+.game-zone-3 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 15px;
