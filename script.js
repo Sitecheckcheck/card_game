@@ -52,6 +52,12 @@ function renderApp(renderGame) {
             appEl.innerHTML = renderGame(window.application.level)
             setTimeout(() => {
                 appEl.innerHTML = renderGameClose(window.application.level)
+                let x = document.querySelectorAll(".game__card")
+                for (const i of x) {
+                    i.addEventListener("click", () => {
+                        console.log("клик")
+                    })
+                }
             }, 5000)
         }
     })
