@@ -7,7 +7,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin")
 
 module.exports = {
-    entry: "script.js",
+    entry: "./script.js",
     mode,
     output: {
         path: path.resolve(__dirname, "dist"),
@@ -38,6 +38,7 @@ module.exports = {
             ? "hidden-source-map"
             : "source-map",
     plugins: [
+        // And here!
         new CopyPlugin({
             patterns: [{ from: "static", to: "static" }],
         }),
