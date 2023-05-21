@@ -15,187 +15,187 @@ __webpack_require__.r(__webpack_exports__);
 const cards = [
     {
         name: "закрытая",
-        img: "./img/закрытая.png",
+        img: "./static/img/закрытая.png",
         id: 0,
     },
     {
         name: "6 бубны",
-        img: "./img/6 бубны.png",
+        img: "./static/img/6 бубны.png",
         id: 1,
     },
     {
         name: "6 крести",
-        img: "./img/6 крести.png",
+        img: "./static/img/6 крести.png",
         id: 2,
     },
     {
         name: "6 пики",
-        img: "./img/6 пики.png",
+        img: "./static/img/6 пики.png",
         id: 3,
     },
     {
         name: "6 черви",
-        img: "./img/6 черви.png",
+        img: "./static/img/6 черви.png",
         id: 4,
     },
     {
         name: "7 бубны",
-        img: "./img/7 бубны.png",
+        img: "./static/img/7 бубны.png",
         id: 5,
     },
     {
         name: "7 крести",
-        img: "./img/7 крести.png",
+        img: "./static/img/7 крести.png",
         id: 6,
     },
     {
         name: "7 пики",
-        img: "./img/7 пики.png",
+        img: "./static/img/7 пики.png",
         id: 7,
     },
     {
         name: "7 черви",
-        img: "./img/7 черви.png",
+        img: "./static/img/7 черви.png",
         id: 8,
     },
     {
         name: "8 бубны",
-        img: "./img/8 бубны.png",
+        img: "./static/img/8 бубны.png",
         id: 9,
     },
     {
         name: "8 крести",
-        img: "./img/8 крести.png",
+        img: "./static/img/8 крести.png",
         id: 10,
     },
     {
-        name: "8 крести",
-        img: "./img/8 крести.png",
+        name: "8 черви",
+        img: "./static/img/8 черви.png",
         id: 11,
     },
     {
         name: "8 пики",
-        img: "./img/8 пики.png",
+        img: "./static/img/8 пики.png",
         id: 12,
     },
     {
         name: "9 бубны",
-        img: "./img/9 бубны.png",
+        img: "./static/img/9 бубны.png",
         id: 13,
     },
     {
         name: "9 крести",
-        img: "./img/9 крести.png",
+        img: "./static/img/9 крести.png",
         id: 14,
     },
     {
         name: "9 пики",
-        img: "./img/9 пики.png",
+        img: "./static/img/9 пики.png",
         id: 15,
     },
     {
         name: "9 черви",
-        img: "./img/9 черви.png",
+        img: "./static/img/9 черви.png",
         id: 16,
     },
     {
         name: "10 бубны",
-        img: "./img/10 бубны.png",
+        img: "./static/img/10 бубны.png",
         id: 17,
     },
     {
         name: "10 крести",
-        img: "./img/10 крести.png",
+        img: "./static/img/10 крести.png",
         id: 18,
     },
     {
         name: "10 пики",
-        img: "./img/10 пики.png",
+        img: "./static/img/10 пики.png",
         id: 19,
     },
     {
         name: "10 черви",
-        img: "./img/10 черви.png",
+        img: "./static/img/10 черви.png",
         id: 20,
     },
     {
         name: "валет бубны",
-        img: "./img/валет бубны.png",
+        img: "./static/img/валет бубны.png",
         id: 21,
     },
     {
         name: "валет крести",
-        img: "./img/валет крести.png",
+        img: "./static/img/валет крести.png",
         id: 22,
     },
     {
         name: "валет пики",
-        img: "./img/валет пики.png",
+        img: "./static/img/валет пики.png",
         id: 23,
     },
     {
         name: "валет черви",
-        img: "./img/валет черви.png",
+        img: "./static/img/валет черви.png",
         id: 24,
     },
     {
         name: "дама бубны",
-        img: "./img/дама бубны.png",
+        img: "./static/img/дама бубны.png",
         id: 25,
     },
     {
         name: "дама крести",
-        img: "./img/дама крести.png",
+        img: "./static/img/дама крести.png",
         id: 26,
     },
     {
         name: "дама пики",
-        img: "./img/дама пики.png",
+        img: "./static/img/дама пики.png",
         id: 27,
     },
     {
         name: "дама черви",
-        img: "./img/дама черви.png",
+        img: "./static/img/дама черви.png",
         id: 28,
     },
     {
         name: "король бубны",
-        img: "./img/король бубны.png",
+        img: "./static/img/король бубны.png",
         id: 29,
     },
     {
         name: "король крести",
-        img: "./img/король крести.png",
+        img: "./static/img/король крести.png",
         id: 30,
     },
     {
         name: "король пики",
-        img: "./img/король пики.png",
+        img: "./static/img/король пики.png",
         id: 31,
     },
     {
         name: "король черви",
-        img: "./img/король черви.png",
+        img: "./static/img/король черви.png",
         id: 32,
     },
     {
         name: "туз бубны",
-        img: "./img/туз бубны.png",
+        img: "./static/img/туз бубны.png",
         id: 33,
     },
     {
         name: "туз крести",
-        img: "./img/туз крести.png",
+        img: "./static/img/туз крести.png",
         id: 34,
     },
     {
         name: "туз пики",
-        img: "./img/туз пики.png",
+        img: "./static/img/туз пики.png",
         id: 35,
     },
     {
         name: "туз черви",
-        img: "./img/туз черви.png",
+        img: "./static/img/туз черви.png",
         id: 36,
     },
 ]
@@ -214,6 +214,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   renderGameClose: () => (/* binding */ renderGameClose)
 /* harmony export */ });
 /* harmony import */ var _cards_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./cards.js */ "./cards.js");
+/* harmony import */ var _game_page_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./game-page.js */ "./game-page.js");
+
 
 function renderGameClose(level) {
     let appHtml
@@ -234,23 +236,23 @@ function renderGameClose(level) {
             <button class="button-start">Начать заново</button>
         </div>
         <ul class="game-zone-1">
-            <li class="game__card">
-                <img class="game-card" src="${_cards_js__WEBPACK_IMPORTED_MODULE_0__.cards[0].img}" alt="1">
+            <li class="game__card" data-id="${_game_page_js__WEBPACK_IMPORTED_MODULE_1__.cardsGame[0].id}">
+                <img class="game-card"  src="${_cards_js__WEBPACK_IMPORTED_MODULE_0__.cards[0].img}" alt="1">
             </li>
-            <li class="game__card">
-                <img class="game-card" src="${_cards_js__WEBPACK_IMPORTED_MODULE_0__.cards[0].img}" alt="2">
+            <li class="game__card" data-id="${_game_page_js__WEBPACK_IMPORTED_MODULE_1__.cardsGame[1].id}">
+                <img class="game-card"  src="${_cards_js__WEBPACK_IMPORTED_MODULE_0__.cards[0].img}" alt="2">
             </li>
-            <li class="game__card">
-                <img class="game-card" src="${_cards_js__WEBPACK_IMPORTED_MODULE_0__.cards[0].img}" alt="3">
+            <li class="game__card" data-id="${_game_page_js__WEBPACK_IMPORTED_MODULE_1__.cardsGame[2].id}">
+                <img class="game-card"  src="${_cards_js__WEBPACK_IMPORTED_MODULE_0__.cards[0].img}" alt="3">
             </li>
-            <li class="game__card">
+            <li class="game__card" data-id="${_game_page_js__WEBPACK_IMPORTED_MODULE_1__.cardsGame[3].id}" >
                 <img class="game-card" src="${_cards_js__WEBPACK_IMPORTED_MODULE_0__.cards[0].img}" alt="4">
             </li>
-            <li class="game__card">
-                <img class="game-card" src="${_cards_js__WEBPACK_IMPORTED_MODULE_0__.cards[0].img}" alt="5">
+            <li class="game__card" data-id="${_game_page_js__WEBPACK_IMPORTED_MODULE_1__.cardsGame[4].id}">
+                <img class="game-card"  src="${_cards_js__WEBPACK_IMPORTED_MODULE_0__.cards[0].img}" alt="5">
             </li>
-            <li class="game__card">
-                <img class="game-card" src="${_cards_js__WEBPACK_IMPORTED_MODULE_0__.cards[0].img}" alt="6">
+            <li class="game__card" data-id="${_game_page_js__WEBPACK_IMPORTED_MODULE_1__.cardsGame[5].id}">
+                <img class="game-card"  src="${_cards_js__WEBPACK_IMPORTED_MODULE_0__.cards[0].img}" alt="6">
             </li>
         </ul>
     </div>
@@ -272,40 +274,40 @@ function renderGameClose(level) {
             <button class="button-start">Начать заново</button>
         </div>
         <ul class="game-zone-2">
-            <li class="game__card">
+            <li class="game__card" data-id="${_game_page_js__WEBPACK_IMPORTED_MODULE_1__.cardsGame[0].id}">
                 <img class="game-card" src="${_cards_js__WEBPACK_IMPORTED_MODULE_0__.cards[0].img}" alt="1">
             </li>
-            <li class="game__card">
+            <li class="game__card" data-id="${_game_page_js__WEBPACK_IMPORTED_MODULE_1__.cardsGame[1].id}">
                 <img class="game-card" src="${_cards_js__WEBPACK_IMPORTED_MODULE_0__.cards[0].img}" alt="2">
             </li>
-            <li class="game__card">
+            <li class="game__card" data-id="${_game_page_js__WEBPACK_IMPORTED_MODULE_1__.cardsGame[2].id}">
                 <img class="game-card" src="${_cards_js__WEBPACK_IMPORTED_MODULE_0__.cards[0].img}" alt="3">
             </li>
-            <li class="game__card">
+            <li class="game__card" data-id="${_game_page_js__WEBPACK_IMPORTED_MODULE_1__.cardsGame[3].id}">
                 <img class="game-card" src="${_cards_js__WEBPACK_IMPORTED_MODULE_0__.cards[0].img}" alt="4">
             </li>
-            <li class="game__card">
+            <li class="game__card" data-id="${_game_page_js__WEBPACK_IMPORTED_MODULE_1__.cardsGame[4].id}">
                 <img class="game-card" src="${_cards_js__WEBPACK_IMPORTED_MODULE_0__.cards[0].img}" alt="5">
             </li>
-            <li class="game__card">
+            <li class="game__card" data-id="${_game_page_js__WEBPACK_IMPORTED_MODULE_1__.cardsGame[5].id}">
                 <img class="game-card" src="${_cards_js__WEBPACK_IMPORTED_MODULE_0__.cards[0].img}" alt="6">
             </li>
-            <li class="game__card">
+            <li class="game__card" data-id="${_game_page_js__WEBPACK_IMPORTED_MODULE_1__.cardsGame[6].id}">
                 <img class="game-card" src="${_cards_js__WEBPACK_IMPORTED_MODULE_0__.cards[0].img}" alt="7">
             </li>
-            <li class="game__card">
+            <li class="game__card" data-id="${_game_page_js__WEBPACK_IMPORTED_MODULE_1__.cardsGame[7].id}">
                 <img class="game-card" src="${_cards_js__WEBPACK_IMPORTED_MODULE_0__.cards[0].img}" alt="8">
             </li>
-            <li class="game__card">
+            <li class="game__card" data-id="${_game_page_js__WEBPACK_IMPORTED_MODULE_1__.cardsGame[8].id}">
                 <img class="game-card" src="${_cards_js__WEBPACK_IMPORTED_MODULE_0__.cards[0].img}" alt="9">
             </li>
-            <li class="game__card">
+            <li class="game__card" data-id="${_game_page_js__WEBPACK_IMPORTED_MODULE_1__.cardsGame[9].id}">
                 <img class="game-card" src="${_cards_js__WEBPACK_IMPORTED_MODULE_0__.cards[0].img}" alt="10">
             </li>
-            <li class="game__card">
+            <li class="game__card" data-id="${_game_page_js__WEBPACK_IMPORTED_MODULE_1__.cardsGame[10].id}">
                 <img class="game-card" src="${_cards_js__WEBPACK_IMPORTED_MODULE_0__.cards[0].img}" alt="11">
             </li>
-            <li class="game__card">
+            <li class="game__card" data-id="${_game_page_js__WEBPACK_IMPORTED_MODULE_1__.cardsGame[11].id}">
                 <img class="game-card" src="${_cards_js__WEBPACK_IMPORTED_MODULE_0__.cards[0].img}" alt="12">
             </li>
         </ul>
@@ -328,58 +330,58 @@ function renderGameClose(level) {
             <button class="button-start">Начать заново</button>
         </div>
         <ul class="game-zone-3">
-            <li class="game__card">
+            <li class="game__card" data-id="${_game_page_js__WEBPACK_IMPORTED_MODULE_1__.cardsGame[0].id}">
                 <img class="game-card" src="${_cards_js__WEBPACK_IMPORTED_MODULE_0__.cards[0].img}" alt="1">
             </li>
-            <li class="game__card">
+            <li class="game__card" data-id="${_game_page_js__WEBPACK_IMPORTED_MODULE_1__.cardsGame[1].id}">
                 <img class="game-card" src="${_cards_js__WEBPACK_IMPORTED_MODULE_0__.cards[0].img}" alt="2">
             </li>
-            <li class="game__card">
+            <li class="game__card" data-id="${_game_page_js__WEBPACK_IMPORTED_MODULE_1__.cardsGame[2].id}">
                 <img class="game-card" src="${_cards_js__WEBPACK_IMPORTED_MODULE_0__.cards[0].img}" alt="3">
             </li>
-            <li class="game__card">
+            <li class="game__card" data-id="${_game_page_js__WEBPACK_IMPORTED_MODULE_1__.cardsGame[3].id}">
                 <img class="game-card" src="${_cards_js__WEBPACK_IMPORTED_MODULE_0__.cards[0].img}" alt="4">
             </li>
-            <li class="game__card">
+            <li class="game__card" data-id="${_game_page_js__WEBPACK_IMPORTED_MODULE_1__.cardsGame[4].id}">
                 <img class="game-card" src="${_cards_js__WEBPACK_IMPORTED_MODULE_0__.cards[0].img}" alt="5">
             </li>
-            <li class="game__card">
+            <li class="game__card" data-id="${_game_page_js__WEBPACK_IMPORTED_MODULE_1__.cardsGame[5].id}">
                 <img class="game-card" src="${_cards_js__WEBPACK_IMPORTED_MODULE_0__.cards[0].img}" alt="6">
             </li>
-            <li class="game__card">
+            <li class="game__card" data-id="${_game_page_js__WEBPACK_IMPORTED_MODULE_1__.cardsGame[6].id}">
                 <img class="game-card" src="${_cards_js__WEBPACK_IMPORTED_MODULE_0__.cards[0].img}" alt="7">
             </li>
-            <li class="game__card">
+            <li class="game__card" data-id="${_game_page_js__WEBPACK_IMPORTED_MODULE_1__.cardsGame[7].id}">
                 <img class="game-card" src="${_cards_js__WEBPACK_IMPORTED_MODULE_0__.cards[0].img}" alt="8">
             </li>
-            <li class="game__card">
+            <li class="game__card" data-id="${_game_page_js__WEBPACK_IMPORTED_MODULE_1__.cardsGame[8].id}">
                 <img class="game-card" src="${_cards_js__WEBPACK_IMPORTED_MODULE_0__.cards[0].img}" alt="9">
             </li>
-            <li class="game__card">
+            <li class="game__card" data-id="${_game_page_js__WEBPACK_IMPORTED_MODULE_1__.cardsGame[9].id}">
                 <img class="game-card" src="${_cards_js__WEBPACK_IMPORTED_MODULE_0__.cards[0].img}" alt="10">
             </li>
-            <li class="game__card">
+            <li class="game__card" data-id="${_game_page_js__WEBPACK_IMPORTED_MODULE_1__.cardsGame[10].id}">
                 <img class="game-card" src="${_cards_js__WEBPACK_IMPORTED_MODULE_0__.cards[0].img}" alt="11">
             </li>
-            <li class="game__card">
+            <li class="game__card" data-id="${_game_page_js__WEBPACK_IMPORTED_MODULE_1__.cardsGame[11].id}">
                 <img class="game-card" src="${_cards_js__WEBPACK_IMPORTED_MODULE_0__.cards[0].img}" alt="12">
             </li>
-            <li class="game__card">
+            <li class="game__card" data-id="${_game_page_js__WEBPACK_IMPORTED_MODULE_1__.cardsGame[12].id}">
                 <img class="game-card" src="${_cards_js__WEBPACK_IMPORTED_MODULE_0__.cards[0].img}" alt="13">
             </li>
-            <li class="game__card">
+            <li class="game__card" data-id="${_game_page_js__WEBPACK_IMPORTED_MODULE_1__.cardsGame[13].id}">
                 <img class="game-card" src="${_cards_js__WEBPACK_IMPORTED_MODULE_0__.cards[0].img}" alt="14">
             </li>
-            <li class="game__card">
+            <li class="game__card" data-id="${_game_page_js__WEBPACK_IMPORTED_MODULE_1__.cardsGame[14].id}">
                 <img class="game-card" src="${_cards_js__WEBPACK_IMPORTED_MODULE_0__.cards[0].img}" alt="15">
             </li>
-            <li class="game__card">
+            <li class="game__card" data-id="${_game_page_js__WEBPACK_IMPORTED_MODULE_1__.cardsGame[15].id}">
                 <img class="game-card" src="${_cards_js__WEBPACK_IMPORTED_MODULE_0__.cards[0].img}" alt="16">
             </li>
-            <li class="game__card">
+            <li class="game__card" data-id="${_game_page_js__WEBPACK_IMPORTED_MODULE_1__.cardsGame[16].id}">
                 <img class="game-card" src="${_cards_js__WEBPACK_IMPORTED_MODULE_0__.cards[0].img}" alt="17">
             </li>
-            <li class="game__card">
+            <li class="game__card" data-id="${_game_page_js__WEBPACK_IMPORTED_MODULE_1__.cardsGame[17].id}">
                 <img class="game-card" src="${_cards_js__WEBPACK_IMPORTED_MODULE_0__.cards[0].img}" alt="18">
             </li>
         </ul>
@@ -401,6 +403,7 @@ function renderGameClose(level) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   cardsGame: () => (/* binding */ cardsGame),
 /* harmony export */   renderGame: () => (/* binding */ renderGame)
 /* harmony export */ });
 /* harmony import */ var _cards_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./cards.js */ "./cards.js");
@@ -702,6 +705,8 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _game_page_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./game-page.js */ "./game-page.js");
 /* harmony import */ var _game_page_close_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./game-page-close.js */ "./game-page-close.js");
+/* harmony import */ var _cards_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./cards.js */ "./cards.js");
+
 
 
 
@@ -756,10 +761,31 @@ function renderApp(renderGame) {
             appEl.innerHTML = renderGame(window.application.level)
             setTimeout(() => {
                 appEl.innerHTML = (0,_game_page_close_js__WEBPACK_IMPORTED_MODULE_1__.renderGameClose)(window.application.level)
-                let x = document.querySelectorAll(".game__card")
-                for (const i of x) {
-                    i.addEventListener("click", () => {
-                        console.log("клик")
+                let cardElements = document.querySelectorAll(".game__card")
+                let firstCard = null
+                for (const cardElement of cardElements) {
+                    cardElement.addEventListener("click", () => {
+                        if (!firstCard) {
+                            firstCard = cardElement.dataset.id
+                            cardElement.innerHTML = `<img class="game-card" src="${_cards_js__WEBPACK_IMPORTED_MODULE_2__.cards[firstCard].img}" alt="1"></img>`
+                        } else {
+                            if (cardElement.dataset.id === firstCard) {
+                                cardElement.innerHTML = `<img class="game-card" src="${
+                                    _cards_js__WEBPACK_IMPORTED_MODULE_2__.cards[cardElement.dataset.id].img
+                                }" alt="1"></img>`
+                                firstCard = null
+                                alert("Вы победили!")
+                            } else {
+                                let cardsEl = document.querySelectorAll(
+                                    `[data-id="${firstCard}"]`
+                                )
+                                for (const i of cardsEl) {
+                                    i.innerHTML = `<img class="game-card"  src="${_cards_js__WEBPACK_IMPORTED_MODULE_2__.cards[0].img}" alt="1">`
+                                }
+                                firstCard = null
+                                alert("Вы проиграли!")
+                            }
+                        }
                     })
                 }
             }, 5000)

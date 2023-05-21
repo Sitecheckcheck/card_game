@@ -11,7 +11,7 @@
         "lint": "npm run lint:js && npm run lint:css",
         "prepare": "husky install",
         "build": "webpack",
-        "start": "webpack-dev-server ––open"
+        "start": "webpack-dev-server"
     },
     "author": "",
     "license": "ISC",

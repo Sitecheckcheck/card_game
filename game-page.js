@@ -18,7 +18,7 @@ function createCards(arr) {
 }
 
 let cardsGameFirst = []
-let cardsGame = []
+export let cardsGame = []
 
 export function renderGame(level) {
     let appHtml

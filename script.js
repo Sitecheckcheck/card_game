@@ -1,5 +1,6 @@
 import { renderGame } from "./game-page.js"
 import { renderGameClose } from "./game-page-close.js"
+import { cards } from "./cards.js"
 
 const appEl = document.getElementById("app")
 
@@ -52,10 +53,31 @@ function renderApp(renderGame) {
             appEl.innerHTML = renderGame(window.application.level)
             setTimeout(() => {
                 appEl.innerHTML = renderGameClose(window.application.level)
-                let x = document.querySelectorAll(".game__card")
-                for (const i of x) {
-                    i.addEventListener("click", () => {
-                        console.log("клик")
+                let cardElements = document.querySelectorAll(".game__card")
+                let firstCard = null
+                for (const cardElement of cardElements) {
+                    cardElement.addEventListener("click", () => {
+                        if (!firstCard) {
+                            firstCard = cardElement.dataset.id
+                            cardElement.innerHTML = `<img class="game-card" src="${cards[firstCard].img}" alt="1"></img>`
+                        } else {
+                            if (cardElement.dataset.id === firstCard) {
+                                cardElement.innerHTML = `<img class="game-card" src="${
+                                    cards[cardElement.dataset.id].img
+                                }" alt="1"></img>`
+                                firstCard = null
+                                alert("Вы победили!")
+                            } else {
+                                let cardsEl = document.querySelectorAll(
+                                    `[data-id="${firstCard}"]`
+                                )
+                                for (const i of cardsEl) {
+                                    i.innerHTML = `<img class="game-card"  src="${cards[0].img}" alt="1">`
+                                }
+                                firstCard = null
+                                alert("Вы проиграли!")
+                            }
+                        }
                     })
                 }
             }, 5000)
