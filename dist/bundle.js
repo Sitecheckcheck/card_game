@@ -638,6 +638,18 @@ function renderGame(level) {
 }
 
 
+/***/ }),
+
+/***/ "./style.css":
+/*!*******************!*\
+  !*** ./style.css ***!
+  \*******************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
 /***/ })
 
 /******/ 	});
@@ -706,6 +718,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _game_page_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./game-page.js */ "./game-page.js");
 /* harmony import */ var _game_page_close_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./game-page-close.js */ "./game-page-close.js");
 /* harmony import */ var _cards_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./cards.js */ "./cards.js");
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./style.css */ "./style.css");
+
 
 
 

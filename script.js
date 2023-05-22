@@ -1,6 +1,7 @@
 import { renderGame } from "./game-page.js"
 import { renderGameClose } from "./game-page-close.js"
 import { cards } from "./cards.js"
+import "./style.css"
 
 const appEl = document.getElementById("app")
 

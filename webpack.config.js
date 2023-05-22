@@ -38,7 +38,7 @@ module.exports = {
             ? "hidden-source-map"
             : "source-map",
     plugins: [
-        // And here!
+        new MiniCssExtractPlugin(),
         new CopyPlugin({
             patterns: [{ from: "static", to: "static" }],
         }),
