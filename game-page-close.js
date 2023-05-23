@@ -57,40 +57,40 @@ export function renderGameClose(level) {
             <button class="button-start">Начать заново</button>
         </div>
         <ul class="game-zone-2">
-            <li class="game__card" data-id="${cardsGame[0].id}">
-                <img class="game-card" src="${cards[0].img}" alt="1">
+            <li class="game__card" data-id="${cardsGame[0].id}" data-index=0>
+                <img class="game-card"  src="${cards[0].img}" alt="1">
             </li>
-            <li class="game__card" data-id="${cardsGame[1].id}">
+            <li class="game__card" data-id="${cardsGame[1].id}" data-index=1>
                 <img class="game-card" src="${cards[0].img}" alt="2">
             </li>
-            <li class="game__card" data-id="${cardsGame[2].id}">
+            <li class="game__card" data-id="${cardsGame[2].id}" data-index=2>
                 <img class="game-card" src="${cards[0].img}" alt="3">
             </li>
-            <li class="game__card" data-id="${cardsGame[3].id}">
+            <li class="game__card" data-id="${cardsGame[3].id}" data-index=3>
                 <img class="game-card" src="${cards[0].img}" alt="4">
             </li>
-            <li class="game__card" data-id="${cardsGame[4].id}">
+            <li class="game__card" data-id="${cardsGame[4].id}" data-index=4>
                 <img class="game-card" src="${cards[0].img}" alt="5">
             </li>
-            <li class="game__card" data-id="${cardsGame[5].id}">
+            <li class="game__card" data-id="${cardsGame[5].id}" data-index=5>
                 <img class="game-card" src="${cards[0].img}" alt="6">
             </li>
-            <li class="game__card" data-id="${cardsGame[6].id}">
+            <li class="game__card" data-id="${cardsGame[6].id}" data-index=6>
                 <img class="game-card" src="${cards[0].img}" alt="7">
             </li>
-            <li class="game__card" data-id="${cardsGame[7].id}">
+            <li class="game__card" data-id="${cardsGame[7].id}" data-index=7>
                 <img class="game-card" src="${cards[0].img}" alt="8">
             </li>
-            <li class="game__card" data-id="${cardsGame[8].id}">
+            <li class="game__card" data-id="${cardsGame[8].id}" data-index=8>
                 <img class="game-card" src="${cards[0].img}" alt="9">
             </li>
-            <li class="game__card" data-id="${cardsGame[9].id}">
+            <li class="game__card" data-id="${cardsGame[9].id}" data-index=9>
                 <img class="game-card" src="${cards[0].img}" alt="10">
             </li>
-            <li class="game__card" data-id="${cardsGame[10].id}">
+            <li class="game__card" data-id="${cardsGame[10].id}" data-index=10>
                 <img class="game-card" src="${cards[0].img}" alt="11">
             </li>
-            <li class="game__card" data-id="${cardsGame[11].id}">
+            <li class="game__card" data-id="${cardsGame[11].id}" data-index=11>
                 <img class="game-card" src="${cards[0].img}" alt="12">
             </li>
         </ul>
@@ -113,58 +113,58 @@ export function renderGameClose(level) {
             <button class="button-start">Начать заново</button>
         </div>
         <ul class="game-zone-3">
-            <li class="game__card" data-id="${cardsGame[0].id}">
+            <li class="game__card" data-id="${cardsGame[0].id}" data-index=0>
                 <img class="game-card" src="${cards[0].img}" alt="1">
             </li>
-            <li class="game__card" data-id="${cardsGame[1].id}">
+            <li class="game__card" data-id="${cardsGame[1].id}" data-index=1>
                 <img class="game-card" src="${cards[0].img}" alt="2">
             </li>
-            <li class="game__card" data-id="${cardsGame[2].id}">
+            <li class="game__card" data-id="${cardsGame[2].id}" data-index=2>
                 <img class="game-card" src="${cards[0].img}" alt="3">
             </li>
-            <li class="game__card" data-id="${cardsGame[3].id}">
+            <li class="game__card" data-id="${cardsGame[3].id}" data-index=3>
                 <img class="game-card" src="${cards[0].img}" alt="4">
             </li>
-            <li class="game__card" data-id="${cardsGame[4].id}">
+            <li class="game__card" data-id="${cardsGame[4].id}" data-index=4>
                 <img class="game-card" src="${cards[0].img}" alt="5">
             </li>
-            <li class="game__card" data-id="${cardsGame[5].id}">
+            <li class="game__card" data-id="${cardsGame[5].id}" data-index=5>
                 <img class="game-card" src="${cards[0].img}" alt="6">
             </li>
-            <li class="game__card" data-id="${cardsGame[6].id}">
+            <li class="game__card" data-id="${cardsGame[6].id}" data-index=6>
                 <img class="game-card" src="${cards[0].img}" alt="7">
             </li>
-            <li class="game__card" data-id="${cardsGame[7].id}">
+            <li class="game__card" data-id="${cardsGame[7].id}" data-index=7>
                 <img class="game-card" src="${cards[0].img}" alt="8">
             </li>
-            <li class="game__card" data-id="${cardsGame[8].id}">
+            <li class="game__card" data-id="${cardsGame[8].id}" data-index=8>
                 <img class="game-card" src="${cards[0].img}" alt="9">
             </li>
-            <li class="game__card" data-id="${cardsGame[9].id}">
+            <li class="game__card" data-id="${cardsGame[9].id}" data-index=9>
                 <img class="game-card" src="${cards[0].img}" alt="10">
             </li>
-            <li class="game__card" data-id="${cardsGame[10].id}">
+            <li class="game__card" data-id="${cardsGame[10].id}" data-index=10>
                 <img class="game-card" src="${cards[0].img}" alt="11">
             </li>
-            <li class="game__card" data-id="${cardsGame[11].id}">
+            <li class="game__card" data-id="${cardsGame[11].id}" data-index=11>
                 <img class="game-card" src="${cards[0].img}" alt="12">
             </li>
-            <li class="game__card" data-id="${cardsGame[12].id}">
+            <li class="game__card" data-id="${cardsGame[12].id}" data-index=12>
                 <img class="game-card" src="${cards[0].img}" alt="13">
             </li>
-            <li class="game__card" data-id="${cardsGame[13].id}">
+            <li class="game__card" data-id="${cardsGame[13].id}" data-index=13>
                 <img class="game-card" src="${cards[0].img}" alt="14">
             </li>
-            <li class="game__card" data-id="${cardsGame[14].id}">
+            <li class="game__card" data-id="${cardsGame[14].id}" data-index=14>
                 <img class="game-card" src="${cards[0].img}" alt="15">
             </li>
-            <li class="game__card" data-id="${cardsGame[15].id}">
+            <li class="game__card" data-id="${cardsGame[15].id}" data-index=15>
                 <img class="game-card" src="${cards[0].img}" alt="16">
             </li>
-            <li class="game__card" data-id="${cardsGame[16].id}">
+            <li class="game__card" data-id="${cardsGame[16].id}" data-index=16>
                 <img class="game-card" src="${cards[0].img}" alt="17">
             </li>
-            <li class="game__card" data-id="${cardsGame[17].id}">
+            <li class="game__card" data-id="${cardsGame[17].id}" data-index=17>
                 <img class="game-card" src="${cards[0].img}" alt="18">
             </li>
         </ul>
