@@ -17,7 +17,7 @@ function createCards(arr) {
     return arr.reduce((res, current) => res.concat([current, current]), [])
 }
 
-let cardsGameFirst = []
+export let cardsGameFirst = []
 export let cardsGame = []
 
 export function renderGame(level) {
@@ -40,11 +40,11 @@ export function renderGame(level) {
             <div class="time">
                 <div class="time__block">
                     <p class="time-name">min</p> 
-                    <p class="min__value">00</p>
+                    <p class="min-value">00</p>
                 </div>
                 <div class="time__block">
                     <p class="time-name">sek</p> 
-                    <p class="sek__value">.00</p>
+                    <p class="sek-value">.00</p>
                 </div>
             </div>
             <button class="button-start">Начать заново</button>
@@ -89,11 +89,11 @@ export function renderGame(level) {
             <div class="time">
                 <div class="time__block">
                     <p class="time-name">min</p> 
-                    <p class="min__value">00</p>
+                    <p class="min-value">00</p>
                 </div>
                 <div class="time__block">
                     <p class="time-name">sek</p> 
-                    <p class="sek__value">.00</p>
+                    <p class="sek-value">.00</p>
                 </div>
             </div>
             <button class="button-start">Начать заново</button>
@@ -156,11 +156,11 @@ export function renderGame(level) {
             <div class="time">
                 <div class="time__block">
                     <p class="time-name">min</p> 
-                    <p class="min__value">00</p>
+                    <p class="min-value">00</p>
                 </div>
                 <div class="time__block">
                     <p class="time-name">sek</p> 
-                    <p class="sek__value">.00</p>
+                    <p class="sek-value">.00</p>
                 </div>
             </div>
             <button class="button-start">Начать заново</button>

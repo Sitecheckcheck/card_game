@@ -226,32 +226,32 @@ function renderGameClose(level) {
             <div class="time">
                 <div class="time__block">
                     <p class="time-name">min</p> 
-                    <p class="min__value">00</p>
+                    <p class="min-value">00</p>
                 </div>
                 <div class="time__block">
                     <p class="time-name">sek</p> 
-                    <p class="sek__value">.00</p>
+                    <p class="sek-value">.00</p>
                 </div>
             </div>
             <button class="button-start">Начать заново</button>
         </div>
         <ul class="game-zone-1">
-            <li class="game__card" data-id="${_game_page_js__WEBPACK_IMPORTED_MODULE_1__.cardsGame[0].id}">
+            <li class="game__card" data-id="${_game_page_js__WEBPACK_IMPORTED_MODULE_1__.cardsGame[0].id}" data-index=0>
                 <img class="game-card"  src="${_cards_js__WEBPACK_IMPORTED_MODULE_0__.cards[0].img}" alt="1">
             </li>
-            <li class="game__card" data-id="${_game_page_js__WEBPACK_IMPORTED_MODULE_1__.cardsGame[1].id}">
+            <li class="game__card" data-id="${_game_page_js__WEBPACK_IMPORTED_MODULE_1__.cardsGame[1].id}" data-index=1>
                 <img class="game-card"  src="${_cards_js__WEBPACK_IMPORTED_MODULE_0__.cards[0].img}" alt="2">
             </li>
-            <li class="game__card" data-id="${_game_page_js__WEBPACK_IMPORTED_MODULE_1__.cardsGame[2].id}">
+            <li class="game__card" data-id="${_game_page_js__WEBPACK_IMPORTED_MODULE_1__.cardsGame[2].id}" data-index=2>
                 <img class="game-card"  src="${_cards_js__WEBPACK_IMPORTED_MODULE_0__.cards[0].img}" alt="3">
             </li>
-            <li class="game__card" data-id="${_game_page_js__WEBPACK_IMPORTED_MODULE_1__.cardsGame[3].id}" >
+            <li class="game__card" data-id="${_game_page_js__WEBPACK_IMPORTED_MODULE_1__.cardsGame[3].id}" data-index=3>
                 <img class="game-card" src="${_cards_js__WEBPACK_IMPORTED_MODULE_0__.cards[0].img}" alt="4">
             </li>
-            <li class="game__card" data-id="${_game_page_js__WEBPACK_IMPORTED_MODULE_1__.cardsGame[4].id}">
+            <li class="game__card" data-id="${_game_page_js__WEBPACK_IMPORTED_MODULE_1__.cardsGame[4].id}" data-index=4>
                 <img class="game-card"  src="${_cards_js__WEBPACK_IMPORTED_MODULE_0__.cards[0].img}" alt="5">
             </li>
-            <li class="game__card" data-id="${_game_page_js__WEBPACK_IMPORTED_MODULE_1__.cardsGame[5].id}">
+            <li class="game__card" data-id="${_game_page_js__WEBPACK_IMPORTED_MODULE_1__.cardsGame[5].id}" data-index=5>
                 <img class="game-card"  src="${_cards_js__WEBPACK_IMPORTED_MODULE_0__.cards[0].img}" alt="6">
             </li>
         </ul>
@@ -264,11 +264,11 @@ function renderGameClose(level) {
             <div class="time">
                 <div class="time__block">
                     <p class="time-name">min</p> 
-                    <p class="min__value">00</p>
+                    <p class="min-value">00</p>
                 </div>
                 <div class="time__block">
                     <p class="time-name">sek</p> 
-                    <p class="sek__value">.00</p>
+                    <p class="sek-value">.00</p>
                 </div>
             </div>
             <button class="button-start">Начать заново</button>
@@ -320,11 +320,11 @@ function renderGameClose(level) {
             <div class="time">
                 <div class="time__block">
                     <p class="time-name">min</p> 
-                    <p class="min__value">00</p>
+                    <p class="min-value">00</p>
                 </div>
                 <div class="time__block">
                     <p class="time-name">sek</p> 
-                    <p class="sek__value">.00</p>
+                    <p class="sek-value">.00</p>
                 </div>
             </div>
             <button class="button-start">Начать заново</button>
@@ -404,6 +404,7 @@ function renderGameClose(level) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   cardsGame: () => (/* binding */ cardsGame),
+/* harmony export */   cardsGameFirst: () => (/* binding */ cardsGameFirst),
 /* harmony export */   renderGame: () => (/* binding */ renderGame)
 /* harmony export */ });
 /* harmony import */ var _cards_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./cards.js */ "./cards.js");
@@ -449,11 +450,11 @@ function renderGame(level) {
             <div class="time">
                 <div class="time__block">
                     <p class="time-name">min</p> 
-                    <p class="min__value">00</p>
+                    <p class="min-value">00</p>
                 </div>
                 <div class="time__block">
                     <p class="time-name">sek</p> 
-                    <p class="sek__value">.00</p>
+                    <p class="sek-value">.00</p>
                 </div>
             </div>
             <button class="button-start">Начать заново</button>
@@ -498,11 +499,11 @@ function renderGame(level) {
             <div class="time">
                 <div class="time__block">
                     <p class="time-name">min</p> 
-                    <p class="min__value">00</p>
+                    <p class="min-value">00</p>
                 </div>
                 <div class="time__block">
                     <p class="time-name">sek</p> 
-                    <p class="sek__value">.00</p>
+                    <p class="sek-value">.00</p>
                 </div>
             </div>
             <button class="button-start">Начать заново</button>
@@ -565,11 +566,11 @@ function renderGame(level) {
             <div class="time">
                 <div class="time__block">
                     <p class="time-name">min</p> 
-                    <p class="min__value">00</p>
+                    <p class="min-value">00</p>
                 </div>
                 <div class="time__block">
                     <p class="time-name">sek</p> 
-                    <p class="sek__value">.00</p>
+                    <p class="sek-value">.00</p>
                 </div>
             </div>
             <button class="button-start">Начать заново</button>
@@ -777,18 +778,36 @@ function renderApp(renderGame) {
                 appEl.innerHTML = (0,_game_page_close_js__WEBPACK_IMPORTED_MODULE_1__.renderGameClose)(window.application.level)
                 let cardElements = document.querySelectorAll(".game__card")
                 let firstCard = null
+                let cardIndex
+                let count = 0
                 for (const cardElement of cardElements) {
                     cardElement.addEventListener("click", () => {
-                        if (!firstCard) {
+                        console.log(cardElement)
+                        if (
+                            !firstCard &&
+                            cardElement.childNodes ===
+                                "./static/img/закрытая.png"
+                        ) {
                             firstCard = cardElement.dataset.id
+                            cardIndex = cardElement.dataset.index
                             cardElement.innerHTML = `<img class="game-card" src="${_cards_js__WEBPACK_IMPORTED_MODULE_2__.cards[firstCard].img}" alt="1"></img>`
                         } else {
-                            if (cardElement.dataset.id === firstCard) {
+                            if (
+                                cardElement.dataset.id === firstCard &&
+                                cardElement.dataset.index !== cardIndex
+                            ) {
                                 cardElement.innerHTML = `<img class="game-card" src="${
                                     _cards_js__WEBPACK_IMPORTED_MODULE_2__.cards[cardElement.dataset.id].img
                                 }" alt="1"></img>`
                                 firstCard = null
-                                alert("Вы победили!")
+                                count++
+                                if (count === _game_page_js__WEBPACK_IMPORTED_MODULE_0__.cardsGameFirst.length) {
+                                    clearInterval(interval)
+                                }
+                            } else if (
+                                cardElement.dataset.index === cardIndex
+                            ) {
+                                return
                             } else {
                                 let cardsEl = document.querySelectorAll(
                                     `[data-id="${firstCard}"]`
@@ -797,12 +816,26 @@ function renderApp(renderGame) {
                                     i.innerHTML = `<img class="game-card"  src="${_cards_js__WEBPACK_IMPORTED_MODULE_2__.cards[0].img}" alt="1">`
                                 }
                                 firstCard = null
-                                alert("Вы проиграли!")
                             }
                         }
                     })
                 }
-            }, 5000)
+                let sek = document.querySelector(".sek-value")
+                let min = document.querySelector(".min-value")
+                let seconds = 0
+                let minutes = 0
+                let interval = setInterval(updateTime, 1000)
+
+                function updateTime() {
+                    seconds++
+                    if (seconds === 60) {
+                        minutes++
+                        seconds = 0
+                    }
+                    sek.textContent = `.${seconds.toString().padStart(2, "0")}`
+                    min.textContent = `${minutes.toString().padStart(2, "0")}`
+                }
+            }, 1000)
         }
     })
 }

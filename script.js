@@ -1,4 +1,4 @@
-import { renderGame } from "./game-page.js"
+import { renderGame, cardsGameFirst } from "./game-page.js"
 import { renderGameClose } from "./game-page-close.js"
 import { cards } from "./cards.js"
 import "./style.css"
@@ -56,18 +56,36 @@ function renderApp(renderGame) {
                 appEl.innerHTML = renderGameClose(window.application.level)
                 let cardElements = document.querySelectorAll(".game__card")
                 let firstCard = null
+                let cardIndex
+                let count = 0
                 for (const cardElement of cardElements) {
                     cardElement.addEventListener("click", () => {
-                        if (!firstCard) {
+                        console.log(cardElement)
+                        if (
+                            !firstCard &&
+                            cardElement.childNodes ===
+                                "./static/img/закрытая.png"
+                        ) {
                             firstCard = cardElement.dataset.id
+                            cardIndex = cardElement.dataset.index
                             cardElement.innerHTML = `<img class="game-card" src="${cards[firstCard].img}" alt="1"></img>`
                         } else {
-                            if (cardElement.dataset.id === firstCard) {
+                            if (
+                                cardElement.dataset.id === firstCard &&
+                                cardElement.dataset.index !== cardIndex
+                            ) {
                                 cardElement.innerHTML = `<img class="game-card" src="${
                                     cards[cardElement.dataset.id].img
                                 }" alt="1"></img>`
                                 firstCard = null
-                                alert("Вы победили!")
+                                count++
+                                if (count === cardsGameFirst.length) {
+                                    clearInterval(interval)
+                                }
+                            } else if (
+                                cardElement.dataset.index === cardIndex
+                            ) {
+                                return
                             } else {
                                 let cardsEl = document.querySelectorAll(
                                     `[data-id="${firstCard}"]`
@@ -76,12 +94,26 @@ function renderApp(renderGame) {
                                     i.innerHTML = `<img class="game-card"  src="${cards[0].img}" alt="1">`
                                 }
                                 firstCard = null
-                                alert("Вы проиграли!")
                             }
                         }
                     })
                 }
-            }, 5000)
+                let sek = document.querySelector(".sek-value")
+                let min = document.querySelector(".min-value")
+                let seconds = 0
+                let minutes = 0
+                let interval = setInterval(updateTime, 1000)
+
+                function updateTime() {
+                    seconds++
+                    if (seconds === 60) {
+                        minutes++
+                        seconds = 0
+                    }
+                    sek.textContent = `.${seconds.toString().padStart(2, "0")}`
+                    min.textContent = `${minutes.toString().padStart(2, "0")}`
+                }
+            }, 1000)
         }
     })
 }

@@ -9,32 +9,32 @@ export function renderGameClose(level) {
             <div class="time">
                 <div class="time__block">
                     <p class="time-name">min</p> 
-                    <p class="min__value">00</p>
+                    <p class="min-value">00</p>
                 </div>
                 <div class="time__block">
                     <p class="time-name">sek</p> 
-                    <p class="sek__value">.00</p>
+                    <p class="sek-value">.00</p>
                 </div>
             </div>
             <button class="button-start">Начать заново</button>
         </div>
         <ul class="game-zone-1">
-            <li class="game__card" data-id="${cardsGame[0].id}">
+            <li class="game__card" data-id="${cardsGame[0].id}" data-index=0>
                 <img class="game-card"  src="${cards[0].img}" alt="1">
             </li>
-            <li class="game__card" data-id="${cardsGame[1].id}">
+            <li class="game__card" data-id="${cardsGame[1].id}" data-index=1>
                 <img class="game-card"  src="${cards[0].img}" alt="2">
             </li>
-            <li class="game__card" data-id="${cardsGame[2].id}">
+            <li class="game__card" data-id="${cardsGame[2].id}" data-index=2>
                 <img class="game-card"  src="${cards[0].img}" alt="3">
             </li>
-            <li class="game__card" data-id="${cardsGame[3].id}" >
+            <li class="game__card" data-id="${cardsGame[3].id}" data-index=3>
                 <img class="game-card" src="${cards[0].img}" alt="4">
             </li>
-            <li class="game__card" data-id="${cardsGame[4].id}">
+            <li class="game__card" data-id="${cardsGame[4].id}" data-index=4>
                 <img class="game-card"  src="${cards[0].img}" alt="5">
             </li>
-            <li class="game__card" data-id="${cardsGame[5].id}">
+            <li class="game__card" data-id="${cardsGame[5].id}" data-index=5>
                 <img class="game-card"  src="${cards[0].img}" alt="6">
             </li>
         </ul>
@@ -47,11 +47,11 @@ export function renderGameClose(level) {
             <div class="time">
                 <div class="time__block">
                     <p class="time-name">min</p> 
-                    <p class="min__value">00</p>
+                    <p class="min-value">00</p>
                 </div>
                 <div class="time__block">
                     <p class="time-name">sek</p> 
-                    <p class="sek__value">.00</p>
+                    <p class="sek-value">.00</p>
                 </div>
             </div>
             <button class="button-start">Начать заново</button>
@@ -103,11 +103,11 @@ export function renderGameClose(level) {
             <div class="time">
                 <div class="time__block">
                     <p class="time-name">min</p> 
-                    <p class="min__value">00</p>
+                    <p class="min-value">00</p>
                 </div>
                 <div class="time__block">
                     <p class="time-name">sek</p> 
-                    <p class="sek__value">.00</p>
+                    <p class="sek-value">.00</p>
                 </div>
             </div>
             <button class="button-start">Начать заново</button>
