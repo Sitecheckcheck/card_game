@@ -348,7 +348,6 @@ function game() {
         var winner;
         var _loop_1 = function (cardElement) {
             cardElement.addEventListener("click", function () {
-                console.log(window.application.level * 2);
                 if (!firstCard && !cardElement.classList.contains("open")) {
                     firstCard = cardElement.dataset.id;
                     cardIndex = cardElement.dataset.index;
