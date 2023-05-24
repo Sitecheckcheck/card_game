@@ -1,6 +1,6 @@
-import { cards } from "./cards.js"
-import { cardsGame } from "./game-page.js"
-export function renderGameClose(level) {
+import { cards } from "./cards"
+import { cardsGame } from "./game-page"
+export function renderGameClose(level: string) {
     let appHtml
     if (level === "1") {
         appHtml = `

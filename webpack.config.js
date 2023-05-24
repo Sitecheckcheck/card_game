@@ -7,7 +7,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin")
 
 module.exports = {
-    entry: "./script.js",
+    entry: "./script.ts",
     mode,
     output: {
         path: path.resolve(__dirname, "dist"),
@@ -16,6 +16,11 @@ module.exports = {
     },
     module: {
         rules: [
+            {
+                test: /\.ts$/,
+                use: "ts-loader",
+                exclude: /node_modules/,
+            },
             {
                 test: /\.css$/,
                 use: [MiniCssExtractPlugin.loader, "css-loader"],
@@ -29,6 +34,9 @@ module.exports = {
                 type: "asset/resource",
             },
         ],
+    },
+    resolve: {
+        extensions: [".ts", ".js"],
     },
     optimization: {
         minimizer: ["...", new CssMinimizerPlugin()],

@@ -1,30 +1,31 @@
-import { cards } from "./cards.js"
+import { cards } from "./cards"
+import { CardsType } from "./cards"
 
-function getRandomIntInclusive(min, max) {
+function getRandomIntInclusive(min: number, max: number) {
     min = Math.ceil(min)
     max = Math.floor(max)
     return Math.floor(Math.random() * (max - min + 1)) + min
 }
 
-function shuffle(array) {
+function shuffle(array: CardsType) {
     for (let i = array.length - 1; i > 0; i--) {
         let j = Math.floor(Math.random() * (i + 1))
         ;[array[i], array[j]] = [array[j], array[i]]
     }
 }
 
-function createCards(arr) {
-    return arr.reduce((res, current) => res.concat([current, current]), [])
+function createCards(arr: CardsType) {
+    return arr.reduce((res: CardsType, current) => res.concat([current, current]), [])
 }
 
-export let cardsGameFirst = []
-export let cardsGame = []
+export let cardsGameFirst: CardsType = []
+export let cardsGame: CardsType = []
 
-export function renderGame(level) {
+export function renderGame(level: string) {
     let appHtml
     if (level === "1") {
         while (cardsGameFirst.length < 3) {
-            let index = getRandomIntInclusive(1, 36)
+            const index: number = getRandomIntInclusive(1, 36)
             if (!cardsGameFirst.includes(cards[index])) {
                 cardsGameFirst.push(cards[index])
             }

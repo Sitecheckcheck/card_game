@@ -1,21 +1,20 @@
-import { renderGameClose } from "./game-page-close.js"
-import { cards } from "./cards.js"
-import { renderGame, cardsGameFirst } from "./game-page.js"
-import { appEl, renderApp } from "./script.js"
+import { renderGameClose } from "./game-page-close"
+import { cards } from "./cards"
+import { renderGame, cardsGameFirst } from "./game-page"
+import { appEl, renderApp } from "./script"
 
 export function game() {
-    appEl.innerHTML = renderGame(window.application.level)
+    appEl.innerHTML = renderGame((<any>window).application.level)
     setTimeout(() => {
-        appEl.innerHTML = renderGameClose(window.application.level)
-        let cardElements = document.querySelectorAll(".game__card")
-        let firstCard = null
-        let cardIndex
+        appEl.innerHTML = renderGameClose((<any>window).application.level)
+        let cardElements: any = document.querySelectorAll(".game__card")
+        let firstCard: any = null
+        let cardIndex: number
         let count = 0
         let countGame = 0
         let winner
         for (const cardElement of cardElements) {
             cardElement.addEventListener("click", () => {
-                console.log(window.application.level * 2)
                 if (!firstCard && !cardElement.classList.contains("open")) {
                     firstCard = cardElement.dataset.id
                     cardIndex = cardElement.dataset.index
@@ -37,27 +36,26 @@ export function game() {
                             winner = true
                             appEl.innerHTML = renderFinish(winner)
 
-                            document
-                                .getElementById("buttonFinish")
-                                .addEventListener("click", () => {
-                                    renderApp()
-                                })
+                            const buttonFinish: any = document.getElementById("buttonFinish")
+
+                            buttonFinish.addEventListener("click", () => {
+                                renderApp()
+                            })
                         }
                     } else if (cardElement.dataset.index === cardIndex) {
                         return
                     } else {
                         countGame++
-                        if (countGame > window.application.level) {
+                        if (countGame > (<any>window).application.level) {
                             winner = false
                             appEl.innerHTML = renderFinish(winner)
 
-                            document
-                                .getElementById("buttonFinish")
-                                .addEventListener("click", () => {
+                            const buttonFinish: any = document.getElementById("buttonFinish")
+                            buttonFinish.addEventListener("click", () => {
                                     renderApp()
                                 })
                         }
-                        let cardsEl = document.querySelectorAll(
+                        let cardsEl: any = document.querySelectorAll(
                             `[data-id="${firstCard}"]`
                         )
                         for (const i of cardsEl) {
@@ -69,18 +67,18 @@ export function game() {
                 }
             })
         }
-        let sek = document.querySelector(".sek-value")
-        let min = document.querySelector(".min-value")
+        let sek: any = document.querySelector(".sek-value")
+        let min: any = document.querySelector(".min-value")
         let seconds = 0
         let minutes = 0
         let interval = setInterval(updateTime, 1000)
 
-        let buttonRestart = document.querySelector(".button-start")
+        let buttonRestart: any = document.querySelector(".button-start")
         buttonRestart.addEventListener("click", () => {
             game()
         })
 
-        function renderFinish(winner) {
+        function renderFinish(winner: boolean) {
             let appHtml = `<div class="body">
                         <div class="start">
                             ${

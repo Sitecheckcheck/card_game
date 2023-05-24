@@ -1,11 +1,12 @@
-import { renderGame } from "./game-page.js"
+// import { renderGame } from "./game-page.js"
 import "./style.css"
-import { game } from "./game.js"
+import { game } from "./game"
 
-export const appEl = document.getElementById("app")
+export const appEl: any = document.getElementById("app")
 
-renderApp(renderGame)
-window.application = {
+renderApp();
+
+(<any>window).application = {
     level: null,
 }
 
@@ -37,17 +38,19 @@ export function renderApp() {
 
     appEl.innerHTML = appHtml
 
-    document.getElementById("buttonStart").addEventListener("click", () => {
-        let levelElements = document.querySelectorAll(".level-input")
+    const startButton: any = document.getElementById("buttonStart")
+
+    startButton.addEventListener("click", () => {
+        let levelElements: any = document.querySelectorAll(".level-input")
 
         for (const levelElement of levelElements) {
             if (levelElement.checked) {
-                window.application.level = levelElement.value
+                ;(<any>window).application.level = levelElement.value
                 break
             }
         }
 
-        if (!window.application.level) {
+        if (!(<any>window).application.level) {
             alert("Выберете сложность")
         } else {
             game()

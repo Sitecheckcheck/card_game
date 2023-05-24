@@ -1,4 +1,10 @@
-export const cards = [
+export type CardsType = {
+    name: string
+    img: string
+    id: number
+}[]
+
+export const cards: CardsType = [
     {
         name: "закрытая",
         img: "./static/img/закрытая.png",
