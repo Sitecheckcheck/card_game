@@ -341,7 +341,7 @@ function game() {
     setTimeout(function () {
         _script__WEBPACK_IMPORTED_MODULE_3__.appEl.innerHTML = (0,_game_page_close__WEBPACK_IMPORTED_MODULE_0__.renderGameClose)(window.application.level);
         var cardElements = document.querySelectorAll(".game__card");
-        var firstCard = null;
+        var firstCard;
         var cardIndex;
         var count = 0;
         var countGame = 0;
@@ -366,7 +366,7 @@ function game() {
                             winner = true;
                             _script__WEBPACK_IMPORTED_MODULE_3__.appEl.innerHTML = renderFinish(winner);
                             var buttonFinish = document.getElementById("buttonFinish");
-                            buttonFinish.addEventListener("click", function () {
+                            buttonFinish === null || buttonFinish === void 0 ? void 0 : buttonFinish.addEventListener("click", function () {
                                 (0,_script__WEBPACK_IMPORTED_MODULE_3__.renderApp)();
                             });
                         }
@@ -380,7 +380,7 @@ function game() {
                             winner = false;
                             _script__WEBPACK_IMPORTED_MODULE_3__.appEl.innerHTML = renderFinish(winner);
                             var buttonFinish = document.getElementById("buttonFinish");
-                            buttonFinish.addEventListener("click", function () {
+                            buttonFinish === null || buttonFinish === void 0 ? void 0 : buttonFinish.addEventListener("click", function () {
                                 (0,_script__WEBPACK_IMPORTED_MODULE_3__.renderApp)();
                             });
                         }
@@ -460,7 +460,7 @@ function renderApp() {
     var appHtml = "\n    <div class=\"body\">\n        <div class=\"start\">\n            <h2 class=\"start-title\">\u0412\u044B\u0431\u0435\u0440\u0438 <br> \u0441\u043B\u043E\u0436\u043D\u043E\u0441\u0442\u044C</h2>\n            <div class=\"levels\">\n                <div class=\"form-radio-btn\">\n                    <input class=\"level-input\" id=\"level-1\" type=\"radio\" name=\"level\" value=\"1\">\n                    <label class=\"level-label\" for=\"level-1\">1</label>\n                </div>\n                 \n                <div class=\"form-radio-btn\">\n                    <input class=\"level-input\" id=\"level-2\" type=\"radio\" name=\"level\" value=\"2\">\n                    <label class=\"level-label\" for=\"level-2\">2</label>\n                </div>\n                 \n                <div class=\"form-radio-btn\">\n                    <input class=\"level-input\" id=\"level-3\" type=\"radio\" name=\"level\" value=\"3\">\n                    <label class=\"level-label\" for=\"level-3\">3</label>\n                </div>\n            </div>\n            <button id=\"buttonStart\" class=\"button-start\">\u0421\u0442\u0430\u0440\u0442</button>\n        </div>\n    </div>\n    ";
     appEl.innerHTML = appHtml;
     var startButton = document.getElementById("buttonStart");
-    startButton.addEventListener("click", function () {
+    startButton === null || startButton === void 0 ? void 0 : startButton.addEventListener("click", function () {
         var levelElements = document.querySelectorAll(".level-input");
         for (var _i = 0, levelElements_1 = levelElements; _i < levelElements_1.length; _i++) {
             var levelElement = levelElements_1[_i];

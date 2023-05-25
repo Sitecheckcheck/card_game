@@ -8,7 +8,7 @@ export function game() {
     setTimeout(() => {
         appEl.innerHTML = renderGameClose((<any>window).application.level)
         let cardElements: any = document.querySelectorAll(".game__card")
-        let firstCard: any = null
+        let firstCard: any
         let cardIndex: number
         let count = 0
         let countGame = 0
@@ -36,9 +36,9 @@ export function game() {
                             winner = true
                             appEl.innerHTML = renderFinish(winner)
 
-                            const buttonFinish: any = document.getElementById("buttonFinish")
+                            const buttonFinish= document.getElementById("buttonFinish")
 
-                            buttonFinish.addEventListener("click", () => {
+                            buttonFinish?.addEventListener("click", () => {
                                 renderApp()
                             })
                         }
@@ -50,8 +50,8 @@ export function game() {
                             winner = false
                             appEl.innerHTML = renderFinish(winner)
 
-                            const buttonFinish: any = document.getElementById("buttonFinish")
-                            buttonFinish.addEventListener("click", () => {
+                            const buttonFinish = document.getElementById("buttonFinish")
+                            buttonFinish?.addEventListener("click", () => {
                                     renderApp()
                                 })
                         }
@@ -67,13 +67,13 @@ export function game() {
                 }
             })
         }
-        let sek: any = document.querySelector(".sek-value")
-        let min: any = document.querySelector(".min-value")
+        let sek = document.querySelector(".sek-value") as HTMLElement
+        let min = document.querySelector(".min-value") as HTMLElement
         let seconds = 0
         let minutes = 0
         let interval = setInterval(updateTime, 1000)
 
-        let buttonRestart: any = document.querySelector(".button-start")
+        let buttonRestart = document.querySelector(".button-start") as HTMLElement
         buttonRestart.addEventListener("click", () => {
             game()
         })

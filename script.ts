@@ -2,7 +2,7 @@
 import "./style.css"
 import { game } from "./game"
 
-export const appEl: any = document.getElementById("app")
+export const appEl = document.getElementById("app") !
 
 renderApp();
 
@@ -38,10 +38,10 @@ export function renderApp() {
 
     appEl.innerHTML = appHtml
 
-    const startButton: any = document.getElementById("buttonStart")
+    const startButton = document.getElementById("buttonStart")
 
-    startButton.addEventListener("click", () => {
-        let levelElements: any = document.querySelectorAll(".level-input")
+    startButton?.addEventListener("click", () => {
+        const levelElements: any = document.querySelectorAll(".level-input")
 
         for (const levelElement of levelElements) {
             if (levelElement.checked) {
