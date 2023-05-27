@@ -7,26 +7,26 @@ export function game() {
     appEl.innerHTML = renderGame((<any>window).application.level)
     setTimeout(() => {
         appEl.innerHTML = renderGameClose((<any>window).application.level)
-        let cardElements: any = document.querySelectorAll(".game__card")
-        let firstCard: any
-        let cardIndex: number
+        let cardElements = Array.from(document.querySelectorAll(".game__card")) as Array<HTMLElement>
+        let firstCard: number | null = null
+        let cardIndex: string
         let count = 0
         let countGame = 0
         let winner
         for (const cardElement of cardElements) {
             cardElement.addEventListener("click", () => {
                 if (!firstCard && !cardElement.classList.contains("open")) {
-                    firstCard = cardElement.dataset.id
-                    cardIndex = cardElement.dataset.index
+                    firstCard = cardElement.dataset.id as unknown as number
+                    cardIndex = cardElement.dataset.index!
                     cardElement.innerHTML = `<img class="game-card" src="${cards[firstCard].img}" alt="1"></img>`
                     cardElement.classList.add("open")
                 } else {
                     if (
-                        cardElement.dataset.id === firstCard &&
+                        cardElement.dataset.id as unknown as number === firstCard &&
                         cardElement.dataset.index !== cardIndex
                     ) {
                         cardElement.innerHTML = `<img class="game-card" src="${
-                            cards[cardElement.dataset.id].img
+                            cards[firstCard].img
                         }" alt="1"></img>`
                         firstCard = null
                         cardElement.classList.add("open")
@@ -55,9 +55,9 @@ export function game() {
                                     renderApp()
                                 })
                         }
-                        let cardsEl: any = document.querySelectorAll(
+                        let cardsEl = Array.from(document.querySelectorAll(
                             `[data-id="${firstCard}"]`
-                        )
+                        )) as Array<HTMLElement>
                         for (const i of cardsEl) {
                             i.innerHTML = `<img class="game-card"  src="${cards[0].img}" alt="1">`
                             i.classList.remove("open")

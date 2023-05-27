@@ -41,8 +41,8 @@ export function renderApp() {
     const startButton = document.getElementById("buttonStart")
 
     startButton?.addEventListener("click", () => {
-        const levelElements: any = document.querySelectorAll(".level-input")
-
+        const levelElements = Array.from(document.querySelectorAll(".level-input")) as Array<HTMLInputElement> 
+console.log(levelElements);
         for (const levelElement of levelElements) {
             if (levelElement.checked) {
                 ;(<any>window).application.level = levelElement.value
