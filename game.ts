@@ -120,3 +120,10 @@ export function game() {
         }
     }, 3000)
 }
+
+
+function sum (a: number, b: number) {
+    return a + b
+}
+
+console.log(sum (3, 4))
