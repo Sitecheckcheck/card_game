@@ -163,5 +163,28 @@
     list-style: none;
 }
 
+.finish-time-text {
+    font-family: StratosSkyeng, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    font-feature-settings: "pnum" on, "lnum" on;
+    color: #000;
+}
+
+.finish-time {
+    font-family: StratosSkyeng, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 72px;
+    color: #000;
+}
+
+.finish-button {
+    margin-bottom: 36px;
+}
+
 
 /*# sourceMappingURL=main.css.map*/

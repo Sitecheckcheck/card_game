@@ -13,7 +13,8 @@
         "build": "webpack",
         "start": "webpack-dev-server",
         "prod": "cross-env NODE_ENV=production webpack",
-        "dev": "cross-env NODE_ENV=development webpack"
+        "dev": "cross-env NODE_ENV=development webpack",
+        "lint:ts": "tsc --noEmit"
     },
     "author": "",
     "license": "ISC",
@@ -33,6 +34,8 @@
         "stylelint-config-prettier": "^9.0.3",
         "stylelint-config-standard": "^25.0.0",
         "stylelint-prettier": "^2.0.0",
+        "ts-loader": "^9.4.3",
+        "typescript": "^5.0.4",
         "webpack": "^5.83.1",
         "webpack-cli": "^5.1.1",
         "webpack-dev-server": "^4.15.0"
