@@ -1,5 +1,5 @@
 import { it, expect, describe } from "@jest/globals"
-import { sum, renderFinish } from "./game.js"
+import { sum, renderFinish } from "../game.ts"
 
 describe("renderFinish", () => {
     it("should return winner if player win", () => {
@@ -35,7 +35,7 @@ describe("renderFinish", () => {
     })
 })
 
-const { shuffle } = require("./game-page.ts")
+const { shuffle } = require("../game-page.ts")
 
 describe("shuffle", () => {
     it("should shuffle array", () => {
