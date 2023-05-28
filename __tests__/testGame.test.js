@@ -1,3 +1,6 @@
+/**
+ * @jest-environment jsdom
+ */
 import { it, expect, describe } from "@jest/globals"
 import { sum, renderFinish } from "../game.ts"
 
