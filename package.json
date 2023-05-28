@@ -29,7 +29,10 @@
             "jsx",
             "json",
             "node"
-        ]
+        ],
+        "moduleNameMapper": {
+            "\\.(css)$": "<rootDir>/__mocks__/styleMock.js"
+        }
     },
     "author": "",
     "license": "ISC",
@@ -47,6 +50,7 @@
         "eslint-plugin-prettier": "^4.2.1",
         "html-webpack-plugin": "^5.5.1",
         "husky": "^8.0.3",
+        "identity-obj-proxy": "^3.0.0",
         "jest": "^29.5.0",
         "mini-css-extract-plugin": "^2.7.6",
         "prettier": "^2.8.8",

@@ -15,7 +15,10 @@ function shuffle(array: CardsType) {
 }
 
 function createCards(arr: CardsType) {
-    return arr.reduce((res: CardsType, current) => res.concat([current, current]), [])
+    return arr.reduce(
+        (res: CardsType, current) => res.concat([current, current]),
+        []
+    )
 }
 
 export let cardsGameFirst: CardsType = []

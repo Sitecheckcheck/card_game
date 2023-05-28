@@ -2,11 +2,11 @@
 import "./style.css"
 import { game } from "./game"
 
-export const appEl = document.getElementById("app") !
+export const appEl = document.getElementById("app")!
 
-renderApp();
+renderApp()
 
-(<any>window).application = {
+;(<any>window).application = {
     level: null,
 }
 
@@ -41,8 +41,10 @@ export function renderApp() {
     const startButton = document.getElementById("buttonStart")
 
     startButton?.addEventListener("click", () => {
-        const levelElements = Array.from(document.querySelectorAll(".level-input")) as Array<HTMLInputElement> 
-console.log(levelElements);
+        const levelElements = Array.from(
+            document.querySelectorAll(".level-input")
+        ) as Array<HTMLInputElement>
+        console.log(levelElements)
         for (const levelElement of levelElements) {
             if (levelElement.checked) {
                 ;(<any>window).application.level = levelElement.value
