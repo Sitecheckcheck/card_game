@@ -15,6 +15,8 @@ export function game() {
         let count = 0
         let countGame = 0
         let winner
+        let seconds = 0
+        let minutes = 0
         for (const cardElement of cardElements) {
             cardElement.addEventListener("click", () => {
                 if (!firstCard && !cardElement.classList.contains("open")) {
@@ -35,7 +37,11 @@ export function game() {
                         if (count === cardsGameFirst.length) {
                             clearInterval(interval)
                             winner = true
-                            appEl.innerHTML = renderFinish(winner)
+                            appEl.innerHTML = renderFinish(
+                                winner,
+                                minutes,
+                                seconds
+                            )
 
                             const buttonFinish =
                                 document.getElementById("buttonFinish")
@@ -50,7 +56,11 @@ export function game() {
                         countGame++
                         if (countGame > (<any>window).application.level) {
                             winner = false
-                            appEl.innerHTML = renderFinish(winner)
+                            appEl.innerHTML = renderFinish(
+                                winner,
+                                minutes,
+                                seconds
+                            )
 
                             const buttonFinish =
                                 document.getElementById("buttonFinish")
@@ -74,8 +84,6 @@ export function game() {
         }
         let sek = document.querySelector(".sek-value") as HTMLElement
         let min = document.querySelector(".min-value") as HTMLElement
-        let seconds = 0
-        let minutes = 0
         let interval = setInterval(updateTime, 1000)
 
         let buttonRestart = document.querySelector(
@@ -84,37 +92,6 @@ export function game() {
         buttonRestart.addEventListener("click", () => {
             game()
         })
-
-        function renderFinish(winner: boolean) {
-            let appHtml = `<div class="body">
-                        <div class="start">
-                            ${
-                                !winner
-                                    ? '<div><img src="./static/img/проиграли.png" alt="проиграли"></div>'
-                                    : '<div><img src="./static/img/выиграли.png" alt="выиграли"></div>'
-                            } 
-                            ${
-                                !winner
-                                    ? '<h2 class="start-title">Вы проиграли!</h2>'
-                                    : '<h2 class="start-title">Вы выиграли!</h2>'
-                            } 
-                            
-                            <div class="finish-time-text">
-                                Затраченное время:
-                            </div>
-                            <div class="time finish-time">
-                                    <p class="min-value">${minutes
-                                        .toString()
-                                        .padStart(2, "0")}</p>
-                                    <p class="sek-value">.${seconds
-                                        .toString()
-                                        .padStart(2, "0")}</p>
-                            </div>
-                            <button id="buttonFinish" class="button-start finish-button">Играть снова</button>
-                        </div>
-                    </div>`
-            return appHtml
-        }
 
         function updateTime() {
             seconds++
@@ -128,8 +105,33 @@ export function game() {
     }, 3000)
 }
 
-function sum(a: number, b: number) {
-    return a + b
+function renderFinish(winner: boolean, minutes: number, seconds: number) {
+    let result = `<div class="body">
+                <div class="start">
+                    ${
+                        !winner
+                            ? '<div><img src="./static/img/проиграли.png" alt="проиграли"></div>'
+                            : '<div><img src="./static/img/выиграли.png" alt="выиграли"></div>'
+                    } 
+                    ${
+                        !winner
+                            ? '<h2 class="start-title">Вы проиграли!</h2>'
+                            : '<h2 class="start-title">Вы выиграли!</h2>'
+                    } 
+                    
+                    <div class="finish-time-text">
+                        Затраченное время:
+                    </div>
+                    <div class="time finish-time">
+                            <p class="min-value">${minutes
+                                .toString()
+                                .padStart(2, "0")}</p>
+                            <p class="sek-value">.${seconds
+                                .toString()
+                                .padStart(2, "0")}</p>
+                    </div>
+                    <button id="buttonFinish" class="button-start finish-button">Играть снова</button>
+                </div>
+            </div>`
+    return result
 }
-
-console.log(sum(3, 4))

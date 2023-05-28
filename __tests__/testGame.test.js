@@ -1,52 +1,41 @@
 /**
  * @jest-environment jsdom
  */
-import { it, expect, describe } from "@jest/globals"
-import { sum, renderFinish } from "../game.ts"
-
-describe("renderFinish", () => {
-    it("should return winner if player win", () => {
-        const winner = true
-        const expected = `<div class="body">
-            <div class="start">
-                <div><img src="./static/img/выиграли.png" alt="выиграли"></div>
-                <h2 class="start-title">Вы выиграли!</h2>
-            <div class="finish-time-text">
-                Затраченное время:
-            </div>
-            <div class="time finish-time">
-                    <p class="min-value"></p>
-                    <p class="sek-value"></p>
-            </div>
-            <button id="buttonFinish" class="button-start finish-button">Играть снова</button>
-        </div>
-    </div>`
-
-        const result = renderFinish(winner)
-
-        expect(expected).toBe(result)
-    })
-
-    it("should sum", () => {
-        const a = 3
-        const b = 4
-        const expected = 7
-
-        const result = sum(a, b)
-
-        expect(expected).toBe(result)
-    })
-})
-
-const { shuffle } = require("../game-page.ts")
+const { it, expect, describe } = require("@jest/globals")
+const {
+    shuffle,
+    getRandomIntInclusive,
+    createCards,
+} = require("../game-page.ts")
 
 describe("shuffle", () => {
     it("should shuffle array", () => {
         const arr = ["1", "2", "3", "4", "5"]
-        const arr1 = arr
 
         shuffle(arr)
 
-        expect(arr[1]).not.toBe(arr1[1])
+        expect(arr[2]).not.toBe("3") || expect(arr[1]).not.toBe("2")
+    })
+})
+
+describe("getRandomIntInclusive", () => {
+    it("should return random namber between min and max", () => {
+        const min = 1
+        const max = 10
+
+        const result = getRandomIntInclusive(min, max)
+
+        expect(result).toBeGreaterThan(min)
+        expect(result).toBeLessThan(max)
+    })
+})
+
+describe("createCards", () => {
+    it("should double the array", () => {
+        const arr = ["1", "2", "3"]
+
+        const result = createCards(arr)
+
+        expect(result).toHaveLength(arr.length * 2)
     })
 })

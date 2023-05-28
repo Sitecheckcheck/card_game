@@ -5,7 +5,6 @@ import { game } from "./game"
 export const appEl = document.getElementById("app")!
 
 renderApp()
-
 ;(<any>window).application = {
     level: null,
 }
