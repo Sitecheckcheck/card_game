@@ -21,7 +21,7 @@
             "^.+\\.(js|ts|tsx)$": "babel-jest",
             "^.+\\.png$": "<rootDir>/pngTransform.js"
         },
-        "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.js?$",
+        "testRegex": "(.*|(\\.|/)(test|spec))\\.js?$",
         "moduleFileExtensions": [
             "ts",
             "tsx",

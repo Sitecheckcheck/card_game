@@ -1,8 +1,8 @@
-import { test, expect, describe } from "@jest/globals"
-import { sum, renderFinish } from "./game.ts"
+import { it, expect, describe } from "@jest/globals"
+import { sum, renderFinish } from "./game.js"
 
 describe("renderFinish", () => {
-    test("should return winтer if player win", () => {
+    it("should return winner if player win", () => {
         const winner = true
         const expected = `<div class="body">
             <div class="start">
@@ -24,7 +24,7 @@ describe("renderFinish", () => {
         expect(expected).toBe(result)
     })
 
-    test("should sum", () => {
+    it("should sum", () => {
         const a = 3
         const b = 4
         const expected = 7
@@ -35,10 +35,10 @@ describe("renderFinish", () => {
     })
 })
 
-import { shuffle } from "./game-page.ts"
+const { shuffle } = require("./game-page.ts")
 
 describe("shuffle", () => {
-    test("should shuffle array", () => {
+    it("should shuffle array", () => {
         const arr = ["1", "2", "3", "4", "5"]
         const arr1 = arr
 
