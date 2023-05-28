@@ -16,9 +16,28 @@
         "dev": "cross-env NODE_ENV=development webpack",
         "test": "jest"
     },
+    "jest": {
+        "transform": {
+            "^.+\\.(js|ts|tsx)$": "babel-jest",
+            "^.+\\.png$": "<rootDir>/pngTransform.js"
+        },
+        "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.js?$",
+        "moduleFileExtensions": [
+            "ts",
+            "tsx",
+            "js",
+            "jsx",
+            "json",
+            "node"
+        ]
+    },
     "author": "",
     "license": "ISC",
     "devDependencies": {
+        "@babel/preset-env": "^7.22.2",
+        "@babel/preset-typescript": "^7.21.5",
+        "@types/jest": "^29.5.1",
+        "babel-jest": "^29.5.0",
         "copy-webpack-plugin": "^11.0.0",
         "cross-env": "^7.0.3",
         "css-loader": "^6.7.4",
@@ -35,6 +54,7 @@
         "stylelint-config-prettier": "^9.0.3",
         "stylelint-config-standard": "^25.0.0",
         "stylelint-prettier": "^2.0.0",
+        "ts-jest": "^29.1.0",
         "ts-loader": "^9.4.3",
         "typescript": "^5.0.4",
         "webpack": "^5.83.1",
