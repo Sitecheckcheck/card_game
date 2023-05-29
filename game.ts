@@ -7,12 +7,16 @@ export function game() {
     appEl.innerHTML = renderGame((<any>window).application.level)
     setTimeout(() => {
         appEl.innerHTML = renderGameClose((<any>window).application.level)
-        let cardElements = Array.from(document.querySelectorAll(".game__card")) as Array<HTMLElement>
+        let cardElements = Array.from(
+            document.querySelectorAll(".game__card")
+        ) as Array<HTMLElement>
         let firstCard: number | null = null
         let cardIndex: string
         let count = 0
         let countGame = 0
         let winner
+        let seconds = 0
+        let minutes = 0
         for (const cardElement of cardElements) {
             cardElement.addEventListener("click", () => {
                 if (!firstCard && !cardElement.classList.contains("open")) {
@@ -22,21 +26,25 @@ export function game() {
                     cardElement.classList.add("open")
                 } else {
                     if (
-                        cardElement.dataset.id as unknown as number === firstCard &&
+                        (cardElement.dataset.id as unknown as number) ===
+                            firstCard &&
                         cardElement.dataset.index !== cardIndex
                     ) {
-                        cardElement.innerHTML = `<img class="game-card" src="${
-                            cards[firstCard].img
-                        }" alt="1"></img>`
+                        cardElement.innerHTML = `<img class="game-card" src="${cards[firstCard].img}" alt="1"></img>`
                         firstCard = null
                         cardElement.classList.add("open")
                         count++
                         if (count === cardsGameFirst.length) {
                             clearInterval(interval)
                             winner = true
-                            appEl.innerHTML = renderFinish(winner)
+                            appEl.innerHTML = renderFinish(
+                                winner,
+                                minutes,
+                                seconds
+                            )
 
-                            const buttonFinish= document.getElementById("buttonFinish")
+                            const buttonFinish =
+                                document.getElementById("buttonFinish")
 
                             buttonFinish?.addEventListener("click", () => {
                                 renderApp()
@@ -48,16 +56,23 @@ export function game() {
                         countGame++
                         if (countGame > (<any>window).application.level) {
                             winner = false
-                            appEl.innerHTML = renderFinish(winner)
+                            appEl.innerHTML = renderFinish(
+                                winner,
+                                minutes,
+                                seconds
+                            )
 
-                            const buttonFinish = document.getElementById("buttonFinish")
+                            const buttonFinish =
+                                document.getElementById("buttonFinish")
                             buttonFinish?.addEventListener("click", () => {
-                                    renderApp()
-                                })
+                                renderApp()
+                            })
                         }
-                        let cardsEl = Array.from(document.querySelectorAll(
-                            `[data-id="${firstCard}"]`
-                        )) as Array<HTMLElement>
+                        let cardsEl = Array.from(
+                            document.querySelectorAll(
+                                `[data-id="${firstCard}"]`
+                            )
+                        ) as Array<HTMLElement>
                         for (const i of cardsEl) {
                             i.innerHTML = `<img class="game-card"  src="${cards[0].img}" alt="1">`
                             i.classList.remove("open")
@@ -69,45 +84,14 @@ export function game() {
         }
         let sek = document.querySelector(".sek-value") as HTMLElement
         let min = document.querySelector(".min-value") as HTMLElement
-        let seconds = 0
-        let minutes = 0
         let interval = setInterval(updateTime, 1000)
 
-        let buttonRestart = document.querySelector(".button-start") as HTMLElement
+        let buttonRestart = document.querySelector(
+            ".button-start"
+        ) as HTMLElement
         buttonRestart.addEventListener("click", () => {
             game()
         })
-
-        function renderFinish(winner: boolean) {
-            let appHtml = `<div class="body">
-                        <div class="start">
-                            ${
-                                !winner
-                                    ? '<div><img src="./static/img/проиграли.png" alt="проиграли"></div>'
-                                    : '<div><img src="./static/img/выиграли.png" alt="выиграли"></div>'
-                            } 
-                            ${
-                                !winner
-                                    ? '<h2 class="start-title">Вы проиграли!</h2>'
-                                    : '<h2 class="start-title">Вы выиграли!</h2>'
-                            } 
-                            
-                            <div class="finish-time-text">
-                                Затраченное время:
-                            </div>
-                            <div class="time finish-time">
-                                    <p class="min-value">${minutes
-                                        .toString()
-                                        .padStart(2, "0")}</p>
-                                    <p class="sek-value">.${seconds
-                                        .toString()
-                                        .padStart(2, "0")}</p>
-                            </div>
-                            <button id="buttonFinish" class="button-start finish-button">Играть снова</button>
-                        </div>
-                    </div>`
-            return appHtml
-        }
 
         function updateTime() {
             seconds++
@@ -119,4 +103,35 @@ export function game() {
             min.textContent = `${minutes.toString().padStart(2, "0")}`
         }
     }, 3000)
+}
+
+function renderFinish(winner: boolean, minutes: number, seconds: number) {
+    let result = `<div class="body">
+                <div class="start">
+                    ${
+                        !winner
+                            ? '<div><img src="./static/img/проиграли.png" alt="проиграли"></div>'
+                            : '<div><img src="./static/img/выиграли.png" alt="выиграли"></div>'
+                    } 
+                    ${
+                        !winner
+                            ? '<h2 class="start-title">Вы проиграли!</h2>'
+                            : '<h2 class="start-title">Вы выиграли!</h2>'
+                    } 
+                    
+                    <div class="finish-time-text">
+                        Затраченное время:
+                    </div>
+                    <div class="time finish-time">
+                            <p class="min-value">${minutes
+                                .toString()
+                                .padStart(2, "0")}</p>
+                            <p class="sek-value">.${seconds
+                                .toString()
+                                .padStart(2, "0")}</p>
+                    </div>
+                    <button id="buttonFinish" class="button-start finish-button">Играть снова</button>
+                </div>
+            </div>`
+    return result
 }

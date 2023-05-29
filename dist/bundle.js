@@ -256,7 +256,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   cardsGame: () => (/* binding */ cardsGame),
 /* harmony export */   cardsGameFirst: () => (/* binding */ cardsGameFirst),
-/* harmony export */   renderGame: () => (/* binding */ renderGame)
+/* harmony export */   createCards: () => (/* binding */ createCards),
+/* harmony export */   getRandomIntInclusive: () => (/* binding */ getRandomIntInclusive),
+/* harmony export */   renderGame: () => (/* binding */ renderGame),
+/* harmony export */   shuffle: () => (/* binding */ shuffle)
 /* harmony export */ });
 /* harmony import */ var _cards__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./cards */ "./cards.ts");
 
@@ -340,12 +343,14 @@ function game() {
     _script__WEBPACK_IMPORTED_MODULE_3__.appEl.innerHTML = (0,_game_page__WEBPACK_IMPORTED_MODULE_2__.renderGame)(window.application.level);
     setTimeout(function () {
         _script__WEBPACK_IMPORTED_MODULE_3__.appEl.innerHTML = (0,_game_page_close__WEBPACK_IMPORTED_MODULE_0__.renderGameClose)(window.application.level);
-        var cardElements = document.querySelectorAll(".game__card");
-        var firstCard;
+        var cardElements = Array.from(document.querySelectorAll(".game__card"));
+        var firstCard = null;
         var cardIndex;
         var count = 0;
         var countGame = 0;
         var winner;
+        var seconds = 0;
+        var minutes = 0;
         var _loop_1 = function (cardElement) {
             cardElement.addEventListener("click", function () {
                 if (!firstCard && !cardElement.classList.contains("open")) {
@@ -355,16 +360,17 @@ function game() {
                     cardElement.classList.add("open");
                 }
                 else {
-                    if (cardElement.dataset.id === firstCard &&
+                    if (cardElement.dataset.id ===
+                        firstCard &&
                         cardElement.dataset.index !== cardIndex) {
-                        cardElement.innerHTML = "<img class=\"game-card\" src=\"".concat(_cards__WEBPACK_IMPORTED_MODULE_1__.cards[cardElement.dataset.id].img, "\" alt=\"1\"></img>");
+                        cardElement.innerHTML = "<img class=\"game-card\" src=\"".concat(_cards__WEBPACK_IMPORTED_MODULE_1__.cards[firstCard].img, "\" alt=\"1\"></img>");
                         firstCard = null;
                         cardElement.classList.add("open");
                         count++;
                         if (count === _game_page__WEBPACK_IMPORTED_MODULE_2__.cardsGameFirst.length) {
                             clearInterval(interval);
                             winner = true;
-                            _script__WEBPACK_IMPORTED_MODULE_3__.appEl.innerHTML = renderFinish(winner);
+                            _script__WEBPACK_IMPORTED_MODULE_3__.appEl.innerHTML = renderFinish(winner, minutes, seconds);
                             var buttonFinish = document.getElementById("buttonFinish");
                             buttonFinish === null || buttonFinish === void 0 ? void 0 : buttonFinish.addEventListener("click", function () {
                                 (0,_script__WEBPACK_IMPORTED_MODULE_3__.renderApp)();
@@ -378,13 +384,13 @@ function game() {
                         countGame++;
                         if (countGame > window.application.level) {
                             winner = false;
-                            _script__WEBPACK_IMPORTED_MODULE_3__.appEl.innerHTML = renderFinish(winner);
+                            _script__WEBPACK_IMPORTED_MODULE_3__.appEl.innerHTML = renderFinish(winner, minutes, seconds);
                             var buttonFinish = document.getElementById("buttonFinish");
                             buttonFinish === null || buttonFinish === void 0 ? void 0 : buttonFinish.addEventListener("click", function () {
                                 (0,_script__WEBPACK_IMPORTED_MODULE_3__.renderApp)();
                             });
                         }
-                        var cardsEl = document.querySelectorAll("[data-id=\"".concat(firstCard, "\"]"));
+                        var cardsEl = Array.from(document.querySelectorAll("[data-id=\"".concat(firstCard, "\"]")));
                         for (var _i = 0, cardsEl_1 = cardsEl; _i < cardsEl_1.length; _i++) {
                             var i = cardsEl_1[_i];
                             i.innerHTML = "<img class=\"game-card\"  src=\"".concat(_cards__WEBPACK_IMPORTED_MODULE_1__.cards[0].img, "\" alt=\"1\">");
@@ -401,25 +407,11 @@ function game() {
         }
         var sek = document.querySelector(".sek-value");
         var min = document.querySelector(".min-value");
-        var seconds = 0;
-        var minutes = 0;
         var interval = setInterval(updateTime, 1000);
         var buttonRestart = document.querySelector(".button-start");
         buttonRestart.addEventListener("click", function () {
             game();
         });
-        function renderFinish(winner) {
-            var appHtml = "<div class=\"body\">\n                        <div class=\"start\">\n                            ".concat(!winner
-                ? '<div><img src="./static/img/проиграли.png" alt="проиграли"></div>'
-                : '<div><img src="./static/img/выиграли.png" alt="выиграли"></div>', " \n                            ").concat(!winner
-                ? '<h2 class="start-title">Вы проиграли!</h2>'
-                : '<h2 class="start-title">Вы выиграли!</h2>', " \n                            \n                            <div class=\"finish-time-text\">\n                                \u0417\u0430\u0442\u0440\u0430\u0447\u0435\u043D\u043D\u043E\u0435 \u0432\u0440\u0435\u043C\u044F:\n                            </div>\n                            <div class=\"time finish-time\">\n                                    <p class=\"min-value\">").concat(minutes
-                .toString()
-                .padStart(2, "0"), "</p>\n                                    <p class=\"sek-value\">.").concat(seconds
-                .toString()
-                .padStart(2, "0"), "</p>\n                            </div>\n                            <button id=\"buttonFinish\" class=\"button-start finish-button\">\u0418\u0433\u0440\u0430\u0442\u044C \u0441\u043D\u043E\u0432\u0430</button>\n                        </div>\n                    </div>");
-            return appHtml;
-        }
         function updateTime() {
             seconds++;
             if (seconds === 60) {
@@ -430,6 +422,18 @@ function game() {
             min.textContent = "".concat(minutes.toString().padStart(2, "0"));
         }
     }, 3000);
+}
+function renderFinish(winner, minutes, seconds) {
+    var result = "<div class=\"body\">\n                <div class=\"start\">\n                    ".concat(!winner
+        ? '<div><img src="./static/img/проиграли.png" alt="проиграли"></div>'
+        : '<div><img src="./static/img/выиграли.png" alt="выиграли"></div>', " \n                    ").concat(!winner
+        ? '<h2 class="start-title">Вы проиграли!</h2>'
+        : '<h2 class="start-title">Вы выиграли!</h2>', " \n                    \n                    <div class=\"finish-time-text\">\n                        \u0417\u0430\u0442\u0440\u0430\u0447\u0435\u043D\u043D\u043E\u0435 \u0432\u0440\u0435\u043C\u044F:\n                    </div>\n                    <div class=\"time finish-time\">\n                            <p class=\"min-value\">").concat(minutes
+        .toString()
+        .padStart(2, "0"), "</p>\n                            <p class=\"sek-value\">.").concat(seconds
+        .toString()
+        .padStart(2, "0"), "</p>\n                    </div>\n                    <button id=\"buttonFinish\" class=\"button-start finish-button\">\u0418\u0433\u0440\u0430\u0442\u044C \u0441\u043D\u043E\u0432\u0430</button>\n                </div>\n            </div>");
+    return result;
 }
 
 
@@ -461,7 +465,8 @@ function renderApp() {
     appEl.innerHTML = appHtml;
     var startButton = document.getElementById("buttonStart");
     startButton === null || startButton === void 0 ? void 0 : startButton.addEventListener("click", function () {
-        var levelElements = document.querySelectorAll(".level-input");
+        var levelElements = Array.from(document.querySelectorAll(".level-input"));
+        console.log(levelElements);
         for (var _i = 0, levelElements_1 = levelElements; _i < levelElements_1.length; _i++) {
             var levelElement = levelElements_1[_i];
             if (levelElement.checked) {
