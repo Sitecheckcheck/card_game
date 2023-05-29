@@ -467,7 +467,6 @@ function renderApp() {
     var startButton = document.getElementById("buttonStart");
     startButton === null || startButton === void 0 ? void 0 : startButton.addEventListener("click", function () {
         var levelElements = Array.from(document.querySelectorAll(".level-input"));
-        console.log(levelElements);
         for (var _i = 0, levelElements_1 = levelElements; _i < levelElements_1.length; _i++) {
             var levelElement = levelElements_1[_i];
             if (levelElement.checked) {
