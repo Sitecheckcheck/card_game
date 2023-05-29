@@ -258,6 +258,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   cardsGameFirst: () => (/* binding */ cardsGameFirst),
 /* harmony export */   createCards: () => (/* binding */ createCards),
 /* harmony export */   getRandomIntInclusive: () => (/* binding */ getRandomIntInclusive),
+/* harmony export */   renderFinish: () => (/* binding */ renderFinish),
 /* harmony export */   renderGame: () => (/* binding */ renderGame),
 /* harmony export */   shuffle: () => (/* binding */ shuffle)
 /* harmony export */ });
@@ -317,6 +318,18 @@ function renderGame(level) {
     }
     return appHtml;
 }
+function renderFinish(winner, minutes, seconds) {
+    var result = "<div class=\"body\">\n                <div class=\"start\">\n                    ".concat(!winner
+        ? '<div><img src="./static/img/проиграли.png" alt="проиграли"></div>'
+        : '<div><img src="./static/img/выиграли.png" alt="выиграли"></div>', " \n                    ").concat(!winner
+        ? '<h2 class="start-title">Вы проиграли!</h2>'
+        : '<h2 class="start-title">Вы выиграли!</h2>', " \n                    \n                    <div class=\"finish-time-text\">\n                        \u0417\u0430\u0442\u0440\u0430\u0447\u0435\u043D\u043D\u043E\u0435 \u0432\u0440\u0435\u043C\u044F:\n                    </div>\n                    <div class=\"time finish-time\">\n                            <p class=\"min-value\">").concat(minutes
+        .toString()
+        .padStart(2, "0"), "</p>\n                            <p class=\"sek-value\">.").concat(seconds
+        .toString()
+        .padStart(2, "0"), "</p>\n                    </div>\n                    <button id=\"buttonFinish\" class=\"button-start finish-button\">\u0418\u0433\u0440\u0430\u0442\u044C \u0441\u043D\u043E\u0432\u0430</button>\n                </div>\n            </div>");
+    return result;
+}
 
 
 /***/ }),
@@ -370,7 +383,7 @@ function game() {
                         if (count === _game_page__WEBPACK_IMPORTED_MODULE_2__.cardsGameFirst.length) {
                             clearInterval(interval);
                             winner = true;
-                            _script__WEBPACK_IMPORTED_MODULE_3__.appEl.innerHTML = renderFinish(winner, minutes, seconds);
+                            _script__WEBPACK_IMPORTED_MODULE_3__.appEl.innerHTML = (0,_game_page__WEBPACK_IMPORTED_MODULE_2__.renderFinish)(winner, minutes, seconds);
                             var buttonFinish = document.getElementById("buttonFinish");
                             buttonFinish === null || buttonFinish === void 0 ? void 0 : buttonFinish.addEventListener("click", function () {
                                 (0,_script__WEBPACK_IMPORTED_MODULE_3__.renderApp)();
@@ -384,7 +397,7 @@ function game() {
                         countGame++;
                         if (countGame > window.application.level) {
                             winner = false;
-                            _script__WEBPACK_IMPORTED_MODULE_3__.appEl.innerHTML = renderFinish(winner, minutes, seconds);
+                            _script__WEBPACK_IMPORTED_MODULE_3__.appEl.innerHTML = (0,_game_page__WEBPACK_IMPORTED_MODULE_2__.renderFinish)(winner, minutes, seconds);
                             var buttonFinish = document.getElementById("buttonFinish");
                             buttonFinish === null || buttonFinish === void 0 ? void 0 : buttonFinish.addEventListener("click", function () {
                                 (0,_script__WEBPACK_IMPORTED_MODULE_3__.renderApp)();
@@ -422,18 +435,6 @@ function game() {
             min.textContent = "".concat(minutes.toString().padStart(2, "0"));
         }
     }, 3000);
-}
-function renderFinish(winner, minutes, seconds) {
-    var result = "<div class=\"body\">\n                <div class=\"start\">\n                    ".concat(!winner
-        ? '<div><img src="./static/img/проиграли.png" alt="проиграли"></div>'
-        : '<div><img src="./static/img/выиграли.png" alt="выиграли"></div>', " \n                    ").concat(!winner
-        ? '<h2 class="start-title">Вы проиграли!</h2>'
-        : '<h2 class="start-title">Вы выиграли!</h2>', " \n                    \n                    <div class=\"finish-time-text\">\n                        \u0417\u0430\u0442\u0440\u0430\u0447\u0435\u043D\u043D\u043E\u0435 \u0432\u0440\u0435\u043C\u044F:\n                    </div>\n                    <div class=\"time finish-time\">\n                            <p class=\"min-value\">").concat(minutes
-        .toString()
-        .padStart(2, "0"), "</p>\n                            <p class=\"sek-value\">.").concat(seconds
-        .toString()
-        .padStart(2, "0"), "</p>\n                    </div>\n                    <button id=\"buttonFinish\" class=\"button-start finish-button\">\u0418\u0433\u0440\u0430\u0442\u044C \u0441\u043D\u043E\u0432\u0430</button>\n                </div>\n            </div>");
-    return result;
 }
 
 

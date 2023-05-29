@@ -6,16 +6,17 @@ const {
     shuffle,
     getRandomIntInclusive,
     createCards,
+    renderFinish,
 } = require("../game-page.ts")
 
 describe("shuffle", () => {
     it("should shuffle array", () => {
-        const arr = ["1", "2", "3", "4", "5"]
+        const arr = [1, 2, 3, 4, 5]
+        const arr2 = [1, 2, 3, 4, 5]
 
         shuffle(arr)
 
-        expect(expect(arr[1]).not.toBe("2") && arr[2]).not.toBe("3") &&
-            expect(arr[3]).not.toBe("4")
+        expect(arr2).not.toEqual(arr)
     })
 })
 
@@ -38,5 +39,17 @@ describe("createCards", () => {
         const result = createCards(arr)
 
         expect(result).toHaveLength(arr.length * 2)
+    })
+})
+
+describe("renderFinish", () => {
+    it("should return HTML-code", () => {
+        const winner = true
+        const min = 12
+        const sec = 21
+
+        const result = renderFinish(winner, min, sec)
+
+        expect(typeof result).toBe("string")
     })
 })

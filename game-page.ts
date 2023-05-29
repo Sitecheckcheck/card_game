@@ -231,3 +231,38 @@ export function renderGame(level: string) {
 
     return appHtml
 }
+
+export function renderFinish(
+    winner: boolean,
+    minutes: number,
+    seconds: number
+) {
+    let result = `<div class="body">
+                <div class="start">
+                    ${
+                        !winner
+                            ? '<div><img src="./static/img/проиграли.png" alt="проиграли"></div>'
+                            : '<div><img src="./static/img/выиграли.png" alt="выиграли"></div>'
+                    } 
+                    ${
+                        !winner
+                            ? '<h2 class="start-title">Вы проиграли!</h2>'
+                            : '<h2 class="start-title">Вы выиграли!</h2>'
+                    } 
+                    
+                    <div class="finish-time-text">
+                        Затраченное время:
+                    </div>
+                    <div class="time finish-time">
+                            <p class="min-value">${minutes
+                                .toString()
+                                .padStart(2, "0")}</p>
+                            <p class="sek-value">.${seconds
+                                .toString()
+                                .padStart(2, "0")}</p>
+                    </div>
+                    <button id="buttonFinish" class="button-start finish-button">Играть снова</button>
+                </div>
+            </div>`
+    return result
+}
