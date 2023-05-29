@@ -14,7 +14,8 @@ describe("shuffle", () => {
 
         shuffle(arr)
 
-        expect(arr[2]).not.toBe("3") || expect(arr[1]).not.toBe("2")
+        expect(expect(arr[1]).not.toBe("2") && arr[2]).not.toBe("3") &&
+            expect(arr[3]).not.toBe("4")
     })
 })
 

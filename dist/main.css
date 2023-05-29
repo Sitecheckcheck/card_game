@@ -186,5 +186,26 @@
     margin-bottom: 36px;
 }
 
+@media (max-width: 1024px) {
+    .game-card {
+        width: 80px;
+        height: 110px;
+    }
+}
+
+@media (max-width: 580px) {
+    .game-card {
+        width: 50px;
+        height: 70px;
+    }
+}
+
+@media (max-width: 380px) {
+    .game-card {
+        width: 30px;
+        height: 50px;
+    }
+}
+
 
 /*# sourceMappingURL=main.css.map*/
