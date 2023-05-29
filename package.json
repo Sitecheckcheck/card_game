@@ -11,7 +11,7 @@
         "lint:js": "eslint ./*.js",
         "lint:css": "stylelint ./*.css",
         "lint:ts": "tsc --noEmit",
-        "lint": "npm run lint:js && npm run lint:css",
+        "lint": "npm run lint:js && npm run lint:css && npm run lint:ts && npm run test",
         "prepare": "husky install",
         "build": "webpack",
         "start": "webpack-dev-server",

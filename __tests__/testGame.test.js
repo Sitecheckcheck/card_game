@@ -25,8 +25,8 @@ describe("getRandomIntInclusive", () => {
 
         const result = getRandomIntInclusive(min, max)
 
-        expect(result).toBeGreaterThan(min)
-        expect(result).toBeLessThan(max)
+        expect(result).toBeGreaterThan(min - 1)
+        expect(result).toBeLessThan(max + 1)
     })
 })
 
