@@ -1,6 +1,9 @@
 {
     "name": "card_game",
     "version": "1.0.0",
+    "repository": {
+        "url": "git+https://github.com/Sitecheckcheck/card_game.git"
+    },
     "description": "",
     "main": "script.js",
     "scripts": {
@@ -14,7 +17,9 @@
         "start": "webpack-dev-server",
         "prod": "cross-env NODE_ENV=production webpack",
         "dev": "cross-env NODE_ENV=development webpack",
-        "test": "jest"
+        "test": "jest",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d dist"
     },
     "jest": {
         "transform": {
@@ -50,6 +55,7 @@
         "eslint": "^8.40.0",
         "eslint-config-prettier": "^8.8.0",
         "eslint-plugin-prettier": "^4.2.1",
+        "gh-pages": "^5.0.0",
         "html-webpack-plugin": "^5.5.1",
         "husky": "^8.0.3",
         "identity-obj-proxy": "^3.0.0",
