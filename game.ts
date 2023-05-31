@@ -1,6 +1,6 @@
 import { renderGameClose } from "./game-page-close"
 import { cards } from "./cards"
-import { renderGame, cardsGameFirst } from "./game-page"
+import { renderGame, cardsGameFirst, renderFinish } from "./game-page"
 import { appEl, renderApp } from "./script"
 
 export function game() {
@@ -103,35 +103,4 @@ export function game() {
             min.textContent = `${minutes.toString().padStart(2, "0")}`
         }
     }, 3000)
-}
-
-function renderFinish(winner: boolean, minutes: number, seconds: number) {
-    let result = `<div class="body">
-                <div class="start">
-                    ${
-                        !winner
-                            ? '<div><img src="./static/img/проиграли.png" alt="проиграли"></div>'
-                            : '<div><img src="./static/img/выиграли.png" alt="выиграли"></div>'
-                    } 
-                    ${
-                        !winner
-                            ? '<h2 class="start-title">Вы проиграли!</h2>'
-                            : '<h2 class="start-title">Вы выиграли!</h2>'
-                    } 
-                    
-                    <div class="finish-time-text">
-                        Затраченное время:
-                    </div>
-                    <div class="time finish-time">
-                            <p class="min-value">${minutes
-                                .toString()
-                                .padStart(2, "0")}</p>
-                            <p class="sek-value">.${seconds
-                                .toString()
-                                .padStart(2, "0")}</p>
-                    </div>
-                    <button id="buttonFinish" class="button-start finish-button">Играть снова</button>
-                </div>
-            </div>`
-    return result
 }
