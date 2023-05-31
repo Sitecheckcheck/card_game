@@ -1,14 +1,17 @@
 const path = require("path")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 const CopyPlugin = require("copy-webpack-plugin")
-const mode =
-    process.env.NODE_ENV === "production" ? "production" : "development"
+// const mode =
+//     process.env.NODE_ENV === "production" ? "production" : "development"
+
+const isProduction = process.env.NODE_ENV === "production"
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin")
 
 module.exports = {
     entry: "./script.ts",
-    mode,
+    // mode,
+    mode: isProduction ? "production" : "development",
     output: {
         path: path.resolve(__dirname, "dist"),
         filename: "bundle.js",

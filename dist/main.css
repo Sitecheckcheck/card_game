@@ -1,211 +1,179 @@
-/*!*************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./style.css ***!
-  \*************************************************************/
 @font-face {
+    font-display: swap;
     font-family: StratosSkyeng;
     font-style: normal;
     font-weight: 400;
-    font-display: swap;
     src: url(ce93393e831d32412096.woff2) format("woff2");
 }
-
 * {
     margin: 0;
     padding: 0;
 }
-
 .body {
     background-color: #004980;
     height: 100vh;
-    display: flex;
-    align-items: center;
     justify-content: center;
 }
-
+.body,
 .start {
-    width: 480px;
-    height: 459px;
+    align-items: center;
+    display: flex;
+}
+.start {
     background: #c2f5ff;
     border-radius: 12px;
-    display: flex;
     flex-direction: column;
+    height: 459px;
     justify-content: space-evenly;
-    align-items: center;
+    width: 480px;
 }
-
 .start-title {
-    font-family: StratosSkyeng, sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 40px;
-    line-height: 48px;
-    text-align: center;
     font-feature-settings: "pnum" on, "lnum" on;
     color: #004980;
+    font-family: StratosSkyeng, sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 48px;
+    text-align: center;
 }
-
 .levels {
     display: flex;
     gap: 24px;
     margin-bottom: 16px;
 }
-
 .form-radio-btn {
     display: inline-block;
 }
-
 .level-input {
     display: none;
 }
-
 .level-label {
-    cursor: pointer;
-    width: 98px;
-    height: 98px;
-    font-family: StratosSkyeng, sans-serif;
+    align-items: center;
     background: #fff;
+    border: none;
     border-radius: 12px;
+    color: #0080c1;
+    cursor: pointer;
+    display: flex;
+    font-family: StratosSkyeng, sans-serif;
+    font-size: 64px;
     font-style: normal;
     font-weight: 400;
-    font-size: 64px;
-    line-height: 72px;
-    display: flex;
-    align-items: center;
+    height: 98px;
     justify-content: center;
-    color: #0080c1;
-    border: none;
+    line-height: 72px;
+    width: 98px;
 }
-
 .level-input:checked + label {
     background: #ffe0a6;
 }
-
 .level-label:hover {
     opacity: 0.7;
 }
-
 .button-start {
-    width: 246px;
-    height: 50px;
+    font-feature-settings: "pnum" on, "lnum" on;
     background: #7ac100;
+    border: none;
     border-radius: 12px;
+    color: #fff;
     font-family: StratosSkyeng, sans-serif;
+    font-size: 24px;
     font-style: normal;
     font-weight: 400;
-    font-size: 24px;
+    height: 50px;
     line-height: 32px;
-    font-feature-settings: "pnum" on, "lnum" on;
-    color: #fff;
-    border: none;
+    width: 246px;
 }
-
 .button-start:hover {
     opacity: 0.8;
 }
-
 .button-start:active {
     opacity: 1;
 }
-
 .game {
     display: flex;
     flex-direction: column;
 }
-
 .game-header {
-    width: 90vw;
-    max-width: 979px;
-    display: flex;
-    justify-content: space-between;
     align-items: center;
+    display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     margin-bottom: 46px;
+    max-width: 979px;
+    width: 90vw;
 }
-
 .time {
-    font-family: StratosSkyeng, sans-serif;
-    font-style: normal;
-    font-weight: 400;
+    display: flex;
     font-size: 64px;
     line-height: 72px;
-    color: #fff;
-    display: flex;
 }
-
+.time,
 .time-name {
+    color: #fff;
     font-family: StratosSkyeng, sans-serif;
     font-style: normal;
     font-weight: 400;
+}
+.time-name {
+    font-feature-settings: "pnum" on, "lnum" on;
     font-size: 16px;
     line-height: 32px;
-    font-feature-settings: "pnum" on, "lnum" on;
-    color: #fff;
 }
-
 .game-zone-1 {
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 15px;
-    list-style: none;
 }
-
+.game-zone-1,
 .game-zone-2 {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 15px;
     list-style: none;
 }
-
+.game-zone-2 {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
 .game-zone-3 {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 15px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     list-style: none;
 }
-
 .finish-time-text {
-    font-family: StratosSkyeng, sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 32px;
     font-feature-settings: "pnum" on, "lnum" on;
     color: #000;
-}
-
-.finish-time {
     font-family: StratosSkyeng, sans-serif;
+    font-size: 24px;
     font-style: normal;
     font-weight: 400;
-    font-size: 64px;
-    line-height: 72px;
-    color: #000;
+    line-height: 32px;
 }
-
+.finish-time {
+    color: #000;
+    font-family: StratosSkyeng, sans-serif;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 72px;
+}
 .finish-button {
     margin-bottom: 36px;
 }
-
 @media (max-width: 1024px) {
     .game-card {
-        width: 80px;
         height: 110px;
+        width: 80px;
     }
 }
-
 @media (max-width: 580px) {
     .game-card {
-        width: 50px;
         height: 70px;
+        width: 50px;
     }
 }
-
 @media (max-width: 380px) {
     .game-card {
-        width: 30px;
         height: 50px;
+        width: 30px;
     }
 }
-
-
-/*# sourceMappingURL=main.css.map*/

@@ -1,4 +1,3 @@
-// import { renderGame } from "./game-page.js"
 import "./style.css"
 import { game } from "./game"
 
@@ -43,7 +42,6 @@ export function renderApp() {
         const levelElements = Array.from(
             document.querySelectorAll(".level-input")
         ) as Array<HTMLInputElement>
-        console.log(levelElements)
         for (const levelElement of levelElements) {
             if (levelElement.checked) {
                 ;(<any>window).application.level = levelElement.value
